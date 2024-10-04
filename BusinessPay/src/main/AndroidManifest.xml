@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pasc.business.ewallet">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--
+      Android L之前，声明了该权限应用就可以使用getRunningTasks接口，允许一个程序获取信息有关当前或最近运行的任务，
+      一个缩略的任务状态，是否活动等等，从L开始，这种方式已经废弃。
+      应用要使用该接口必须声明权限android.permission.REAL_GET_TASKS，而这个权限是不对三方应用开放的
+      （在Manifest里申请了也没有作用），只有系统应用（有系统签名）可以调用该权限。
+    -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--威富通sdk需要的权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        <!--为了解决java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/client/methods/HttpPost
+         在高版本的Android 设备上（Android 9.0），http.client相关类不再用了，为了解决这个问题，可以如下配置。-->
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <activity
+            android:name=".business.home.ui.EwalletHomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+
+        <activity
+            android:name=".business.account.ui.CreateAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.account.ui.CertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.bankcard.ui.AddMainCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.bankcard.ui.BankCardListActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.bankcard.ui.BindChangeBankMainCardActivity"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.SetPassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pay.ui.PayMainStandActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/EwalletAppThemeTrans">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="aacfaaaaii" /> <!-- 由招行业务系统与商户之间协商配置 -->
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 如果需要浏览器支持打开，则category.BROWSABLE -->
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- schema的协议类型：可以自行设置，只要按照统一规则，前后端一致就行 -->
+                <data android:scheme="${UNION_SCHEME}" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".business.pay.ui.SignMainStandActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/EwalletAppThemeTrans" />
+        <activity
+            android:name=".business.pay.ui.PayResultSuccessActivity"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pay.ui.PayResultFailedActivity"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".common.webview.PascPayWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.PayManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name="com.pasc.lib.crop.CropImageActivity"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".picture.pictureSelect.PictureSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".picture.pictureSelect.NewPictureSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".picture.pictureSelect.activity.AlbumsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".picture.pictureSelect.activity.AlbumsSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.traderecord.ui.BalanceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.traderecord.ui.BalanceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.traderecord.ui.BillListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.traderecord.ui.BillDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.VerifyPassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.traderecord.ui.BillListSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity
+            android:name=".business.traderecord.ui.BillMonthActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.PassWordCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.account.ui.otp.CreateAccountPhoneOtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.PassWordModifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.pwd.ui.ModifyPwdSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.rechargewithdraw.ui.RechargeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity
+            android:name=".business.rechargewithdraw.ui.RechargeSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.rechargewithdraw.ui.WithdrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.rechargewithdraw.ui.WithdrawSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.bankcard.ui.BankCardDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.bankcard.ui.otp.AddMainCardPhoneOtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.logout.ui.WalletLogoutEnableActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.logout.ui.WalletLogoutDisableActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.logout.ui.WalletLogoutSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+        <activity
+            android:name=".business.logout.ui.WalletLogoutSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EwalletTheme" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/app_provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

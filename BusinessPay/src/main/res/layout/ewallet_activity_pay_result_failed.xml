@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:keep="@layout/ewallet_activity_pay_result_failed">
+
+    <com.pasc.business.ewallet.widget.toolbar.PascToolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_toolbar_title_height"
+        android:background="@color/ewallet_white_bg"
+        app:ewallet_title_text_color="@color/ewallet_color_333333"
+        app:ewallet_title_text_size="@dimen/ewallet_toolbar_title_text_size"
+        app:ewallet_back_icon="@drawable/ewallet_toolbar_ic_back"
+        app:ewallet_under_divider_height="@dimen/ewallet_toolbar_devider_height"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/ewallet_white_bg">
+
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ewallet_ic_pay_result_failed"
+            android:layout_marginTop="@dimen/ewallet_pay_result_failed_icon_margin_top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/pasc_text_size_21"
+            android:textColor="@color/ewallet_color_333333"
+            android:text="@string/ewallet_pay_failed"
+            android:layout_marginTop="@dimen/ewallet_pay_result_failed_title_margin_top"/>
+
+        <TextView
+            android:id="@+id/ewallet_activity_pay_result_failed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/pasc_text_size_15"
+            android:textColor="@color/ewallet_color_999999"
+            android:layout_marginTop="@dimen/ewallet_pay_result_failed_value_margin_top"
+            android:layout_marginBottom="@dimen/ewallet_pay_result_failed_value_margin_bottom"
+            android:layout_marginLeft="@dimen/ewallet_pay_success_btn_margin_left"
+            android:layout_marginRight="@dimen/ewallet_pay_success_btn_margin_left"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ewallet_activity_pay_result_failed_check_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginTop="@dimen/ewallet_pay_success_btn_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="@string/ewallet_go_home"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+
+
+</LinearLayout>

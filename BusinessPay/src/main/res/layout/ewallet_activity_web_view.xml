@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/ewallet_primary_bg"
+              xmlns:tools="http://schemas.android.com/tools" >
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="viewClick"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <ProgressBar
+            android:id="@+id/ewallet_activity_web_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progressDrawable="@drawable/ewallet_webview_progress_bar"
+            android:visibility="gone"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            />
+        <WebView
+            android:id="@+id/ewallet_activity_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </WebView >
+        <include layout="@layout/ewallet_webview_error" android:visibility="invisible"/>
+
+    </RelativeLayout >
+</LinearLayout >

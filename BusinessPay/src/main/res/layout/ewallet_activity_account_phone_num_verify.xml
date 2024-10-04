@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/ewallet_phone_num_verify_rl"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ewallet_primary_bg"
+              xmlns:tools="http://schemas.android.com/tools" >
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <RelativeLayout
+        android:layout_below="@id/ewallet_activity_toolbar"
+        android:id="@+id/ewallet_phone_num_verify_tip_rl"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" >
+        <TextView
+            android:id="@+id/ewallet_phone_num_verify_name"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text=""
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/ewallet_phone_num_verify_tip_rl"
+        android:id="@+id/ewallet_phone_num_verify_code_rl"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/ewallet_white_bg" >
+
+        <com.pasc.business.ewallet.common.customview.ClearEditText
+            android:id="@+id/ewallet_phone_num_verify_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:focusable="true"
+
+            android:focusableInTouchMode="true"
+            android:gravity="top|left"
+            android:hint="@string/ewallet_input_verification_code"
+            android:inputType="text"
+            android:textColor="@color/ewallet_color_333333"
+            android:textColorHint="@color/ewallet_hint_color"
+            android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/ewallet_phone_num_verify_count"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ewallet_text_default_color_selector"
+            android:textSize="17sp" />
+
+
+    </LinearLayout >
+
+    <TextView
+        android:layout_below="@id/ewallet_phone_num_verify_code_rl"
+        android:id="@+id/ewallet_phone_num_verify_help"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ewallet_unreceived_verification_code"
+        android:textColor="@color/ewallet_theme_color"
+        android:textSize="13sp" />
+
+    <Button
+        android:layout_below="@id/ewallet_phone_num_verify_help"
+        android:id="@+id/ewallet_phone_num_verify_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:enabled="false"
+        android:text="@string/ewallet_next"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="17sp" />
+    <com.pasc.lib.keyboard.EwalletKeyboardExtraView
+        android:id="@+id/ewallet_phone_num_verify_kv"
+        app:ewalletKeyboardType="bankCard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout >

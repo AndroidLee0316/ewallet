@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ewallet_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/picker_dialog_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/ewallet_white"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+       android:gravity="center"
+      >
+        <TextView
+            android:id="@+id/close_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:textColor="@color/ewallet_theme_color"
+            android:foreground="@drawable/ewallet_widget_fg_clickable"
+            android:textSize="17sp"
+            android:text="@string/ewallet_cancel"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/ewallet_dialog_primary"
+            android:text="标题"/>
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:paddingRight="15dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textSize="17sp"
+            android:foreground="@drawable/ewallet_widget_fg_clickable"
+            android:textColor="@color/ewallet_theme_color"
+            android:text="@string/ewallet_confirm"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E0E0E0"></View>
+    <com.pasc.business.ewallet.widget.dialog.bottompicker.widget.DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

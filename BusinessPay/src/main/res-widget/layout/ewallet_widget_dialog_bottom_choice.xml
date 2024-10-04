@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:hint=""
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/ewallet_widget_bg_list_divider" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ewallet_pay_yue_record_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/ewallet_widget_bg_list_divider" />
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#ffffff"
+            android:foreground="@drawable/ewallet_widget_fg_clickable"
+            android:gravity="center"
+            android:text="@string/ewallet_cancel"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

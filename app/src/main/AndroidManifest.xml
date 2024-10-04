@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pasc.ewallet.dev">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <queries>
+        <!-- 正式环境 -->
+        <package android:name="com.eg.android.AlipayGphone" />
+        <!-- 沙箱环境 -->
+        <package android:name="com.eg.android.AlipayGphoneRC" />
+        <package android:name="hk.alipay.wallet" />
+    </queries>
+
+    <application
+        android:name=".TheApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/demo_app_name"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/EwalletTheme"
+        tools:replace="android:name, android:theme, android:allowBackup"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- 刘海屏幕适配 -->
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2" />
+        <!-- 小米手机开启刘海适配 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <!-- 华为手机开启刘海适配 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="${applicationId}.wxapi.WXPayEntryActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name="${applicationId}.wxapi.WXEntryActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="true"/>
+
+        <activity android:name=".JihuoActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:documentLaunchMode="intoExisting"
+            />
+
+        <activity
+            android:name="com.swiftfintech.pay.activity.UnifiedPay"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 威富通 -->
+
+        <activity
+            android:name=".pay.unionpay.ui.AddBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.unionpay.ui.ChooseBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.unionpay.ui.VerificationCodeActivity"
+            android:screenOrientation="portrait" />
+        <meta-data
+            android:name="CurrentEnvironment"
+            android:value="PROD"> <!-- PROD or TEST -->
+        </meta-data>
+        <meta-data
+            android:name="PPPaySDK"
+            android:value="true" />
+
+        <!-- 为了使用 "通用跳转 SDK" 的能力，需要在你的 App 的 AndroidManifest.xml 中添加这一项 -->
+        <!-- 并合理设置 android:scheme 的值 -->
+        <activity android:name="com.alipay.sdk.app.AlipayResultActivity" tools:node="merge">
+            <intent-filter tools:node="replace">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.pasc.smt"/> <!-- scheme值需要根据项目去修改，保证唯一性 -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

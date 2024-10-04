@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ewalletKeyboardView">
+        <attr name="ewalletKeyboardType" format="enum">
+            <enum name="money" value="0" />
+            <enum name="idCard" value="1" />
+            <enum name="bankCard" value="3" />
+            <enum name="password" value="4" />
+        </attr>
+        <attr name="ewalletShowSafe" format="boolean"></attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <include layout="@layout/ewallet_activity_toolbar"/>
+
+        <TextView
+            android:id="@+id/tvPayType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="21sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvPayFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:textColor="@color/ewallet_theme_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/ewallet_place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="39.5dp"
+            android:visibility="visible" />
+
+        <com.pasc.lib.keyboard.EwalletPassWordView
+            android:id="@+id/pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp" />
+
+        <TextView
+            android:id="@+id/tvForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="忘记密码"
+            android:textColor="@color/ewallet_theme_color"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <com.pasc.lib.keyboard.EwalletPwdKeyboardView
+        android:id="@+id/keyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

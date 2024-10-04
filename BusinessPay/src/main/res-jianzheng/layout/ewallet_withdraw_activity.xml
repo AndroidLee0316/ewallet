@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <com.pasc.business.ewallet.common.customview.StatusView
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ewallet_withdraw_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ewallet_withdraw_title_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ewallet_white"
+                android:orientation="vertical"
+                android:padding="@dimen/ewallet_account_recharge_item_padding">
+
+                <TextView
+                    android:id="@+id/ewallet_withdraw_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/ewallet_withdraw_to"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="@dimen/pasc_text_size_13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ewallet_account_withdraw_icon_margin_top"
+                    android:orientation="horizontal">
+
+<!--                    <com.pasc.business.ewallet.widget.image.RoundedImageView-->
+<!--                        android:id="@+id/ewallet_withdraw_bank_iv"-->
+<!--                        android:layout_width="@dimen/ewallet_account_withdraw_icon_width"-->
+<!--                        android:layout_height="@dimen/ewallet_account_withdraw_icon_width"-->
+<!--                        app:riv_oval="true"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        tools:src="@drawable/ewallet_ic_no_bank_card" />-->
+                    <com.pasc.business.ewallet.widget.image.RoundedImageView
+                        android:id="@+id/ewallet_withdraw_bank_iv"
+                        android:layout_width="@dimen/ewallet_account_withdraw_icon_width"
+                        android:layout_height="@dimen/ewallet_account_withdraw_icon_width"
+                        tools:src="@drawable/ewallet_ic_no_bank_card" />
+
+                    <TextView
+                        android:id="@+id/ewallet_withdraw_bank_tv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ewallet_account_withdraw_icon_to_right"
+                        android:gravity="center_vertical|left"
+                        android:textColor="@color/ewallet_color_333333"
+                        android:textSize="@dimen/pasc_text_size_17" />
+
+                    <ImageView
+                        android:id="@+id/ewallet_withdraw_arrow"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ewallet_arrow_right"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_vertical_split_height"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_item_padding"
+                android:layout_marginRight="@dimen/ewallet_account_recharge_item_padding"
+                android:background="@color/ewallet_primary_divider"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_account_recharge_num_key_height"
+                android:background="@color/ewallet_white"
+                android:gravity="bottom"
+                android:paddingLeft="@dimen/ewallet_account_recharge_item_padding"
+                android:text="@string/ewallet_withdraw_money_num"
+                android:textColor="@color/ewallet_color_999999"
+                android:textSize="@dimen/pasc_text_size_13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:minHeight="@dimen/ewallet_account_recharge_num_et_height"
+                android:paddingBottom="19dp"
+                android:background="@color/ewallet_white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ewallet_account_recharge_num_key_margin_right"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="bottom"
+                    android:text="@string/ewallet_recharge_num_type"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/pasc_text_size_27" />
+
+                <EditText
+                    android:id="@+id/ewallet_withdraw_num_et"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:inputType="numberDecimal"
+                    tools:text="1"
+                    android:longClickable="false"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+                    android:textSize="@dimen/pasc_text_size_37" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_vertical_split_height"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_item_padding"
+                android:layout_marginRight="@dimen/ewallet_account_recharge_item_padding"
+                android:background="@color/ewallet_primary_divider"
+                 />
+
+
+            <LinearLayout
+                android:id="@+id/ewallet_withdraw_balance_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ewallet_white"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/ewallet_account_recharge_item_padding"
+                android:paddingTop="@dimen/ewallet_account_recharge_item_padding"
+                android:paddingLeft="@dimen/ewallet_account_recharge_item_padding"
+                android:paddingBottom="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/ewallet_withdraw_balance_remind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/ewallet_withdraw_money_num_pre"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+                <TextView
+                    android:id="@+id/ewallet_withdraw_balance_all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ewallet_account_withdraw_all_withdraw_margin_left"
+                    android:gravity="center_vertical"
+                    android:text="@string/ewallet_withdraw_all"
+                    android:textColor="@color/ewallet_theme_color"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingBottom="10dp"
+                android:textSize="12sp"
+                android:paddingLeft="@dimen/ewallet_account_recharge_item_padding"
+                android:paddingRight="@dimen/ewallet_account_recharge_item_padding"
+                android:text="当天充值及入账金额，1个工作日后才可提现"
+                android:textColor="@color/ewallet_color_666666"
+                android:background="@color/ewallet_white"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_commit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_account_btn_height"
+                android:layout_marginLeft="@dimen/ewallet_account_balance_btn_margin_left"
+                android:layout_marginRight="@dimen/ewallet_account_balance_btn_margin_right"
+                android:layout_marginTop="@dimen/ewallet_account_recharge_margin_top"
+                android:background="@drawable/ewallet_btn_default_selector"
+                android:gravity="center"
+                android:text="@string/ewallet_withdraw"
+                android:enabled="false"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="@dimen/pasc_text_size_17" />
+        </LinearLayout>
+
+    </com.pasc.business.ewallet.common.customview.StatusView>
+
+</LinearLayout>

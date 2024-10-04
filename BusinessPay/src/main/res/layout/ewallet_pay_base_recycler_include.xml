@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pasc.business.ewallet.common.customview.StatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ewallet_pay_base_statusView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_white"
+   >
+
+    <com.pasc.business.ewallet.common.customview.MySwipeRefreshLayout
+        android:id="@+id/ewallet_pay_base_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ewallet_pay_base_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.pasc.business.ewallet.common.customview.MySwipeRefreshLayout>
+</com.pasc.business.ewallet.common.customview.StatusView>

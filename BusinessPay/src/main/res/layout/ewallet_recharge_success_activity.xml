@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/ewallet_pay_result_success_container_margin_left"
+        android:background="@color/ewallet_white_bg">
+
+
+        <ImageView
+            android:id="@+id/ewallet_activity_pay_result_success_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ewallet_ic_pay_result_success"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_icon_margin_top"/>
+
+        <TextView
+            android:id="@+id/ewallet_activity_pay_result_success_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/pasc_text_size_21"
+            android:textColor="@color/ewallet_color_333333"
+            android:text="@string/ewallet_pay_success"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_title_margin_top"/>
+
+
+        <TextView
+            android:id="@+id/ewallet_activity_pay_result_success_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/pasc_text_size_21"
+            android:textColor="@color/ewallet_color_333333"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_num_margin_top" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_vertical_split_height"
+            android:background="@color/ewallet_primary_divider"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_split_margin_top"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_container_margin_left"
+            android:layout_marginBottom="@dimen/ewallet_pay_result_success_item_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/ewallet_pay_type"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_999999"/>
+
+            <TextView
+                android:id="@+id/ewallet_activity_pay_result_success_type_value_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="right"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ewallet_pay_result_success_item_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/ewallet_collection_person"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_999999"/>
+
+            <TextView
+                android:id="@+id/ewallet_activity_pay_result_success_num_value_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="right"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ewallet_activity_pay_result_success_commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginTop="@dimen/ewallet_pay_success_btn_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="@string/ewallet_finish"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+
+</LinearLayout>

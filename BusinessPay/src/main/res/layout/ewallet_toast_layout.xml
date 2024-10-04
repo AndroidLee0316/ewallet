@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ewallet_toast_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="22dp"
+        android:paddingTop="22dp">
+
+        <ImageView
+            android:id="@+id/ewallet_toast_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ewallet_toast_success" />
+
+        <TextView
+            android:id="@+id/ewallet_toast_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="开通成功"
+            android:textColor="@color/ewallet_white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

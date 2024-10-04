@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="ewallet_pay_common_title_height">44dp</dimen>
+    <dimen name="ewallet_pay_common_padding">15dp</dimen>
+    <dimen name="ewallet_pay_common_big_size">17sp</dimen>
+    <dimen name="ewallet_pay_common_mid_size">15sp</dimen>
+    <dimen name="ewallet_pay_common_small_size">13sp</dimen>
+
+</resources>

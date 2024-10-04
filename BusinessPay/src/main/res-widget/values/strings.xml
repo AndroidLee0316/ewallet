@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    ]
+
+
+    <string name="number_picker_increment_button">"增加"</string>
+    <string name="number_picker_decrement_button">"减少"</string>
+
+
+    <string name="date_picker_increment_month_button">"Month +"</string>
+    <string name="date_picker_decrement_month_button">"Month -"</string>
+    <string name="date_picker_increment_day_button">"Day +"</string>
+    <string name="date_picker_decrement_day_button">"Day -"</string>
+    <string name="date_picker_increment_year_button">"Year +"</string>
+    <string name="date_picker_decrement_year_button">"Year -"</string>
+    <string name="calendar_year">年</string>
+    <string name="calendar_month">月</string>
+    <string name="calendar_day">日</string>
+    <string name="lunar_leap">Leap</string>
+
+
+</resources>

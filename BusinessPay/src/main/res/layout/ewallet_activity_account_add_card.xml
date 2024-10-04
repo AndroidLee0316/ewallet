@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ewallet_primary_bg"
+              xmlns:tools="http://schemas.android.com/tools" >
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+    <RelativeLayout
+        android:layout_below="@id/ewallet_activity_toolbar"
+        android:id="@+id/ewallet_addcard_tip_rl"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" >
+        <TextView
+            android:id="@+id/ewallet_addcard_info_name"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/ewallet_add_bankcard_desc"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/ewallet_addcard_tip_rl"
+        android:id="@+id/ewallet_addcard_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ewallet_white_bg">
+
+        <RelativeLayout
+            android:id="@+id/ewallet_addcard_input_card_rl"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/ewallet_white_bg" >
+
+            <com.pasc.business.ewallet.common.customview.SpaceEditText
+                android:id="@+id/ewallet_addcard_et_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true"
+                android:gravity="top|left"
+                android:hint="@string/ewallet_input_bankcard_tip"
+                android:inputType="text"
+                android:textColor="@color/ewallet_color_333333"
+                android:textColorHint="@color/ewallet_hint_color"
+                android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+
+                android:textSize="17sp" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ewallet_addcard_et_del_card"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ewallet_del_edittext_icon"/>
+
+        </RelativeLayout >
+        <View
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:background="@color/ewallet_primary_divider"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:id="@+id/ewallet_addcard_input_phone_rl"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/ewallet_white_bg" >
+
+            <com.pasc.business.ewallet.common.customview.SpaceEditText
+                android:id="@+id/ewallet_addcard_et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true"
+                android:gravity="top|left"
+                android:hint="@string/ewallet_input_phone_num_tip"
+                android:inputType="number"
+                android:textColor="@color/ewallet_color_333333"
+                android:textColorHint="@color/ewallet_hint_color"
+                android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+
+                android:textSize="17sp" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ewallet_addcard_et_del_phone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ewallet_del_edittext_icon"/>
+        </RelativeLayout >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ewallet_addcard_check_rl"
+        android:layout_below="@id/ewallet_addcard_ll"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ewallet_ic_center_dot"
+            android:drawablePadding="5dp"
+            android:id="@+id/ewallet_addcard_tip"
+            android:textSize="13sp"
+            android:textColor="@color/ewallet_color_999999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ewallet_just_support_self_card"/>
+
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ewallet_addcard_tv_support_card"
+            android:textSize="13sp"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/ewallet_query_support_card_icon"
+            android:textColor="@color/ewallet_primary_btn_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支持的银行卡"/>
+    </RelativeLayout >
+
+    <Button
+        android:layout_below="@id/ewallet_addcard_check_rl"
+        android:id="@+id/ewallet_addcard_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:enabled="false"
+        android:text="@string/ewallet_next"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="17sp" />
+
+    <com.pasc.lib.keyboard.EwalletKeyboardExtraView
+        android:id="@+id/ewallet_addcard_kv_card"
+        app:ewalletKeyboardType="bankCard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.pasc.lib.keyboard.EwalletKeyboardExtraView
+        android:id="@+id/ewallet_addcard_kv_phone"
+        app:ewalletKeyboardType="bankCard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout >

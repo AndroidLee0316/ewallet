@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ewallet_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:text="请选择账单类型"
+        android:textColor="@color/ewallet_color_333333" />
+
+    <com.pasc.business.ewallet.widget.NoRecycleGridView
+        android:id="@+id/ewallet_pay_type_grid"
+        android:numColumns="3"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/ewallet_primary_bg"
+
+        android:layout_height="10dp"/>
+    <TextView
+        android:id="@+id/ewallet_tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:text="取消"
+        android:textColor="@color/ewallet_color_333333" />
+
+
+</LinearLayout>

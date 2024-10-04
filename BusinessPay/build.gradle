@@ -1,0 +1,201 @@
+apply plugin: 'com.android.library'
+//apply plugin:'com.proguard.library'
+apply plugin: 'com.kezong.fat-aar'
+//银联商务回调Scheme
+def UNION_SCHEME   = "upppay"
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    def sdkVersion = "1.2.0"
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+
+        if (needNdkBuild == 'true') {
+            externalNativeBuild {
+                cmake {
+                    abiFilters "armeabi", "armeabi-v7a", "x86","arm64-v8a","x86_64"
+                    cppFlags "-std=c++11 -frtti -fexceptions -Wno-error=format-security -fsigned-char -fvisibility=hidden -fvisibility-inlines-hidden -Wno-invalid-source-encoding"
+                    arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=stlport_static"
+                }
+            }
+        }
+        manifestPlaceholders = [UNION_SCHEME : UNION_SCHEME]
+    }
+    if (needNdkBuild == 'true') {
+        externalNativeBuild {
+            cmake {
+                path "CMakeLists.txt"
+            }
+        }
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+
+            buildConfigField "boolean", "PRODUCT_MODE", "true"
+            buildConfigField "int", "PRODUCT_FLAVORS_TYPE", "1"
+            buildConfigField "String", "X_SDK_VERSION", "\"$sdkVersion\""
+            buildConfigField "int", "currentBuildType", "$currentBuildType"
+
+            buildConfigField "String", "TEST_ENV_HOST_URL", "\"$TEST_ENV_HOST_URL\""
+            buildConfigField "String", "STG2_ENV_HOST_URL", "\"$STG2_ENV_HOST_URL\""
+            buildConfigField "String", "RELEASE_ENV_HOST_URL", "\"$RELEASE_ENV_HOST_URL\""
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            buildConfigField "boolean", "PRODUCT_MODE", "false"
+            buildConfigField "int", "PRODUCT_FLAVORS_TYPE", "2"
+            buildConfigField "String", "X_SDK_VERSION", "\"$sdkVersion\""
+            buildConfigField "int", "currentBuildType", "$currentBuildType"
+            buildConfigField "String", "TEST_ENV_HOST_URL", "\"$TEST_ENV_HOST_URL\""
+            buildConfigField "String", "STG2_ENV_HOST_URL", "\"$STG2_ENV_HOST_URL\""
+            buildConfigField "String", "RELEASE_ENV_HOST_URL", "\"$RELEASE_ENV_HOST_URL\""
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (needNdkBuild == 'true') {
+                jniLibs.srcDirs=[]
+            }else{
+            }
+            if (currentBuildType==jhPayBuildType){
+                res.srcDirs = ['src/main/res',
+                               'src/main/res-jianzheng',
+                               'src/main/res-photo',
+                               'src/main/res-widget',
+                               'src/main/res-theme-jh',
+                               'src/main/res-crop',
+                               'src/main/res-widget',
+                               'src/main/res-adapter',
+                               'src/main/res-keyborad'
+
+                ]
+            }else{
+                if (currentBuildType==whJzbPayBuildType){
+                    res.srcDirs = ['src/main/res',
+                        'src/main/res-jianzheng',
+                        'src/main/res-photo',
+                        'src/main/res-widget',
+                        'src/main/res-theme-weihai',
+                        'src/main/res-crop',
+                        'src/main/res-widget',
+                        'src/main/res-adapter',
+                        'src/main/res-keyborad'
+
+                    ]
+                } else {
+                    res.srcDirs = ['src/main/res',
+                        'src/main/res-jianzheng',
+                        'src/main/res-photo',
+                        'src/main/res-widget',
+                        'src/main/res-theme-jzb',
+                        'src/main/res-crop',
+                        'src/main/res-widget',
+                        'src/main/res-adapter',
+                        'src/main/res-keyborad'
+
+                    ]
+                }
+            }
+            java{
+                srcDir 'src/main/javaPayOpenApi'
+                srcDir 'src/main/java'
+                srcDir 'src/main/javaPayLib'
+
+            }
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    implementation "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+
+    implementation "io.reactivex.rxjava2:rxjava:${rxjava2Version}"
+    implementation "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
+    implementation ("com.squareup.retrofit2:adapter-rxjava2:${retrofit2Version}"){
+        exclude module: 'rxjava'
+    }
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroid2Version}"
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+    implementation "com.android.support:support-annotations:${supportLibraryVersion}"
+
+    // 微信支付
+    api "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:${wxchatVersion}"
+    // 天眼
+//    implementation 'com.tendcloud:tenddata:1.4.2'
+    // 加
+    if(currentBuildType==wxJzbPayBuildType){
+        //无锡sm2加密库 和 bcprov-jdk16 冲突了
+        implementation "org.bouncycastle:bcprov-jdk15on:${bcprovVersion15}"
+    }else{
+        implementation "org.bouncycastle:bcprov-jdk16:${bcprovVersion}"
+    }
+
+//    embed "com.pasc.lib:aliPay:${aliVersion}"
+    api 'com.alipay.sdk:alipaysdk-android:15.8.11'
+    api 'com.android.support.constraint:constraint-layout:2.0.4'
+}
+
+
+apply plugin: 'maven'
+
+//groupIdName = "com.pasc.business"
+//versionMaven = '1.6.2'
+//artifactIdName = "ewallet"
+//
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            // 存放库的Maven地址
+//            repository(url: "${rootProject.ext.mavenUrl}") {
+//                authentication(userName: "admin", password: "admin123")
+//            }
+//            pom.project {
+//                groupId "com.zxs.business"
+//                artifactId "ewallet"
+//                version 1.0.0
+//                packaging "aar"
+//            }
+//
+//        }
+//    }
+//}
+
+uploadArchives{
+    repositories.mavenDeployer{
+        pom.groupId = "com.zxs.business"// 唯一标识（通常为模块包名，也可以任意）
+        pom.artifactId = "ewallet" // 项目名称（通常为类库模块名称，也可以任意）
+        pom.version = "1.0.0" // 版本号
+        // 配置本地仓库路径，项目根目录下的repository目录中
+        repository(url: uri('E:/zxsCode/maven'))
+    }
+}

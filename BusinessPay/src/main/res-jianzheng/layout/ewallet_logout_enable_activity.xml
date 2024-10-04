@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ewallet_white"
+        android:paddingBottom="30dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="注销成功后账户信息将产生如下变更"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="17sp"
+        android:layout_marginTop="24.5dp"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="6dp"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ewallet_logout_tip_icon"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/ewallet_circle_gray_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="账单及钱包余额明细将被清空"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="15sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/ewallet_circle_gray_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="解绑所有银行卡"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="15sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="系统将为您清空当前账户的绑卡信息"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="15sp"
+        android:layout_marginLeft="39dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/ewallet_circle_gray_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="当前账户的钱包页面将会关闭"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="15sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="“我的钱包”进入需要重新开通钱包"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="15sp"
+        android:layout_marginLeft="39dp"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ewallet_logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginTop="@dimen/ewallet_pay_success_btn_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="确认注销"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+</LinearLayout>

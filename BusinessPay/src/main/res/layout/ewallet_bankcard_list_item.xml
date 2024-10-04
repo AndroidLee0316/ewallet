@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ewallet_white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ewallet_card_root"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_marginBottom="18dp">
+
+        <com.pasc.business.ewallet.widget.image.RoundedImageView
+            android:id="@+id/ewallet_bank_list_item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ewallet_bg_no_bank_card"
+            app:ewallet_riv_corner_radius="6dp" />
+
+        <com.pasc.business.ewallet.common.customview.CircleImageView
+            android:id="@+id/ewallet_bank_list_item_logo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ewallet_ic_no_bank_card" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ewallet_bank_list_item_logo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ewallet_bank_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                tools:text="@string/ewallet_home_bank_card_simple_title"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="@dimen/ewallet_bank_normal_size" />
+
+            <TextView
+                android:id="@+id/ewallet_bank_list_item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/ewallet_home_bank_card_simple_type"
+                android:alpha="0.6"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="@dimen/ewallet_bank_small_size" />
+
+            <TextView
+                android:id="@+id/ewallet_bank_list_item_cardno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                tools:text="@string/ewallet_home_bank_card_simple_id"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="@dimen/ewallet_bank_cardno_size" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ewallet_bank_list_item_water_mark"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ewallet_ic_bank_card_bg_logo" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

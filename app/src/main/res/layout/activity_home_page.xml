@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_home_title_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="首 页"
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="@dimen/ewallet_title_text_size" />
+
+        <Button
+            android:id="@+id/home_test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ewallet_home_withdraw_btn_bg"
+            android:text="环境切换"
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="会员号: "
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_memberNo"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="请输入会员号"
+                android:text="2091900074924"
+                android:textColor="@color/ewallet_white_bg"
+                android:textColorHint="#F4F4F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="商户号: "
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_merchantNo"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="请输入商户号"
+                android:text="10819010716"
+                android:textColor="@color/ewallet_white_bg"
+                android:textColorHint="#F4F4F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="订单号: "
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/homt_input_order"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="请输入订单号"
+                android:textColor="@color/ewallet_white_bg"
+                android:textColorHint="#F4F4F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="场景号: "
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_scene_id"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:hint="请输入场景号"
+                android:textColor="@color/ewallet_white_bg"
+                android:textColorHint="#F4F4F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="支付金额 单位/元: "
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:inputType="numberDecimal"
+                android:hint="请输入支付金额"
+                android:text="0.01"
+                android:maxLength="8"
+                android:textColor="@color/ewallet_white_bg"
+                android:textColorHint="#F4F4F4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/home_goto_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="钱包首页"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/home_place_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="推单"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/home_pay_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="去支付"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/home_bill_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="账单列表"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/recharge_create_order"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="充值下单"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/recharge"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="充值"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/wxSign"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="微信签约"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/aliSign"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ewallet_home_withdraw_btn_bg"
+                android:text="支付宝签约"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/check_phone"
+            android:text="是否校验手机号"
+            android:checked="true"
+            android:padding="10dp"
+            android:textColor="@color/ewallet_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:onClick="quickTest"
+            android:background="@drawable/ewallet_home_withdraw_btn_bg"
+            android:text="银联测试"
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/yzj_666"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ewallet_home_withdraw_btn_bg"
+            android:text="激活实名，别测试， add_Cert"
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/home_env"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ff0000"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/home_test_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

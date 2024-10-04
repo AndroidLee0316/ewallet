@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+    <com.pasc.business.ewallet.common.customview.StatusView
+        android:id="@+id/ewallet_pay_yue_record_statusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ewallet_white">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ewallet_primary_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+                android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ewallet_pay_recored_top_drawable"
+                android:minHeight="140dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_detail_logo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                         />
+                    <com.pasc.business.ewallet.common.customview.JustifyTextView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/tv_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#2E332F"
+                        android:textSize="@dimen/ewallet_pay_common_big_size"
+                        tools:text="沃尔玛购物广场(购物中心店)" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_detail_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="32sp"
+                    tools:text="+100.00" />
+
+                <TextView
+                    android:id="@+id/tv_detail_status_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="13sp"
+                    tools:text="交易成功" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+                android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+                android:background="@drawable/ewallet_dot_line">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+                android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+                android:paddingBottom="30dp"
+                android:background="@drawable/ewallet_pay_recored_bottom_drawable"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_detail_good_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+                    android:paddingRight="@dimen/ewallet_pay_common_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品名称"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_good_name_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="end|center_vertical"
+                        android:maxLines="2"
+                        android:textSize="15sp"
+                        tools:text="红牛维生素功能饮料" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_detail_good_name_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ewallet_pay_common_padding"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+                    android:paddingRight="@dimen/ewallet_pay_common_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商户全称"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_good_name_all_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="end|center_vertical"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        tools:text="沃尔玛(深圳)商业零售有限公司" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ewallet_pay_common_padding"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+                    android:paddingRight="@dimen/ewallet_pay_common_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易时间"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_time_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="end|center_vertical|right"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        tools:text="2018-06-04 11:56" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_payType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ewallet_pay_common_padding"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+                    android:paddingRight="@dimen/ewallet_pay_common_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付方式"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_pay_type_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="end|center_vertical|right"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        tools:text="招商银行(1234)" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ewallet_pay_common_padding"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+                    android:paddingRight="@dimen/ewallet_pay_common_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易单号"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_zhangdan_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="end|center_vertical|right"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        tools:text="20180604759248789" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.pasc.business.ewallet.common.customview.StatusView>
+</LinearLayout>

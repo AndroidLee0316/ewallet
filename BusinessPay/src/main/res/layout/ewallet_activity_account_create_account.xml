@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ewallet_create_account_ll"
+              android:orientation="vertical"
+              android:background="@color/ewallet_white_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:src="@drawable/ewallet_create_account_icon"/>
+    </RelativeLayout >
+    
+    <TextView
+        android:id="@+id/ewallet_create_account_tv_name"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="21sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        tools:text="@string/ewallet_who_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/ewallet_create_account_tv_des"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="15sp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="3dp"
+        tools:text="@string/ewallet_service_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:background="@color/ewallet_primary_divider"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/ewallet_addcard_info_checkbox_agree"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="6dp"
+            android:src="@drawable/ewallet_rect_uncheck"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ewallet_addcard_info_tv_agree"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="13sp"
+            tools:text="同意《电子钱包服务协议》"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout >
+    <Button
+        android:id="@+id/ewallet_create_account_btn_create"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:enabled="false"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="17sp"
+        android:textColor="@color/ewallet_white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/ewallet_create_text"/>
+
+</LinearLayout >

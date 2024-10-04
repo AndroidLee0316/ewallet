@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题样式 -->
+
+
+    <style name="EwalletRoundDialog" parent="AppBaseDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <!--appBaseDialog-->
+    <style name="AppBaseDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:backgroundStacked">#000000</item>
+    </style>
+
+    <style name="EwalletBottomChoiceDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/EwalletBottomDialogAnimation</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="EwalletBottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/ewallet_widget_dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/ewallet_widget_dialog_bottom_out</item>
+    </style>
+
+    <style name="EwalletLoadingDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/EwalletLoadingDialogAnimation</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+
+    <style name="EwalletInsetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/EwalletLoadingDialogAnimation</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="EwalletLoadingDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/ewallet_widget_dialog_loading_in</item>
+        <item name="android:windowExitAnimation">@anim/ewallet_widget_dialog_loading_out</item>
+    </style>
+
+    <style name="EwalletSelectItem" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:backgroundStacked">#000000</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/EwalletAnimationPicker</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="EwalletAnimationPicker" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/ewallet_widget_dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/ewallet_widget_dialog_bottom_out</item>
+    </style>
+
+
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/EwalletAnimationPicker</item>
+    </style>
+
+
+</resources>

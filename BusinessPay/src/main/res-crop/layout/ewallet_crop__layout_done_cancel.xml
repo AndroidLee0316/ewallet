@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Ewallet_Crop.DoneCancelBar">
+
+    <FrameLayout
+        android:id="@+id/btn_cancel"
+        style="@style/Ewallet_Crop.ActionButton">
+        <TextView style="@style/Ewallet_Crop.ActionButtonText.Cancel" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_done"
+        style="@style/Ewallet_Crop.ActionButton">
+        <TextView style="@style/Ewallet_Crop.ActionButtonText.Done" />
+    </FrameLayout>
+
+</LinearLayout>

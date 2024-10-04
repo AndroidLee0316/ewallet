@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ewallet_theme_color">#B82E2C</color>
+    <color name="ewallet_disable_theme_color">#33B82E2C</color>
+    <color name="ewallet_dark_theme_color">#90E3EB</color>
+    <color name="ewallet_home_bg">#1C97A2</color>
+    <color name="pasc_primary">#B82E2C</color>
+</resources>

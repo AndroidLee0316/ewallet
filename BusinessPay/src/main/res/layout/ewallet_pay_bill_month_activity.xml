@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_primary_bg"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <com.pasc.business.ewallet.common.customview.StatusView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ewallet_pay_base_statusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/ewallet_content_view"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ewallet_pay_date_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ewallet_pay_common_title_height"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/ewallet_pay_bottom_arrow"
+            android:gravity="center"
+            android:paddingLeft="@dimen/ewallet_pay_common_padding"
+            android:paddingRight="@dimen/ewallet_pay_common_padding"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="@dimen/ewallet_pay_common_small_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="21dp"
+            android:background="@drawable/ewallet_pay_recored_top_drawable"
+            android:gravity="center_vertical"
+            android:minHeight="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ewallet_pay_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" ¥ "
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="27sp" />
+
+                <com.pasc.business.ewallet.common.customview.FontTextView
+                    android:id="@+id/ewallet_pay_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="37sp" />
+            </LinearLayout>
+          </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+                android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+                android:background="@drawable/ewallet_dot_line">
+
+            </View>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="16dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ewallet_pay_recored_bottom_drawable"
+                android:gravity="center_vertical"
+                android:minHeight="100dp"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="27dp"
+                android:layout_marginLeft="36dp"
+                android:text="历史支出对比"
+                android:textColor="@color/ewallet_color_999999"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+            <com.pasc.business.ewallet.business.traderecord.ui.MonthBillView
+                android:id="@+id/ewallet_trade_view"
+                android:layout_width="match_parent"
+                android:layout_height="220dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+        </LinearLayout>
+        </LinearLayout>
+    </com.pasc.business.ewallet.common.customview.StatusView>
+</LinearLayout>

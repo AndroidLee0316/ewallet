@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ewallet_pay_bill_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ewallet_pay_common_title_height"
+    android:background="@color/ewallet_primary_bg"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ewallet_pay_date_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/ewallet_pay_common_padding"
+        android:paddingRight="@dimen/ewallet_pay_common_padding"
+        android:gravity="center"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="@dimen/ewallet_pay_common_small_size" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ewallet_pay_month_bill_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/ewallet_pay_common_padding"
+        android:gravity="center"
+        android:paddingRight="@dimen/ewallet_pay_common_padding"
+        android:drawableRight="@drawable/ewallet_arrow_right_small"
+        android:text="月账单"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="@dimen/ewallet_pay_common_small_size" />
+</LinearLayout>

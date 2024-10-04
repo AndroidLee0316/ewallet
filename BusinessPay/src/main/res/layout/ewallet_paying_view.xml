@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/ewallet_send_verify_code_view_contain_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ewallet_white_bg"
+        android:layout_alignParentBottom="true">
+
+        <com.pasc.business.ewallet.widget.toolbar.PascToolbar
+            android:id="@+id/ewallet_paying_view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_bank_card_select_tool_bar_height"
+            android:background="@color/ewallet_white_bg"
+            app:ewallet_enable_under_divider="false"
+            app:ewallet_back_icon="@drawable/ewallet_close_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ewallet_paying_view_loading_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ewallet_widget_ic_loading"/>
+
+            <TextView
+                android:id="@+id/ewallet_paying_view_loading_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ewallet_paying"
+                android:textColor="@color/ewallet_theme_color"
+                android:textSize="@dimen/pasc_text_size_17"
+                android:layout_marginTop="@dimen/ewallet_paying_view_title_margin_top"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_recharge_success_list_height"
+        android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+        android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left"
+        android:paddingTop="@dimen/ewallet_account_recharge_sucess_item_padding_top"
+        android:orientation="vertical"
+        android:background="@color/ewallet_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/ewallet_account_recharge_success_item_icon_width"
+                android:layout_height="@dimen/ewallet_account_recharge_success_item_icon_width"
+                android:src="@drawable/ewallet_withdraw_success_icon"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现申请已经提交，待银行处理"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_sucess_item_title_padding_left"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/pasc_text_size_17"
+                android:textColor="@color/ewallet_color_333333"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/ewallet_account_recharge_success_item_icon_split_width"
+                android:layout_height="@dimen/ewallet_account_recharge_success_item_icon_split_height"
+                android:background="@color/ewallet_theme_color"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_success_item_icon_split_margin"
+                android:layout_marginRight="@dimen/ewallet_account_recharge_success_item_icon_split_margin"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_tv12"
+                android:layout_width="wrap_content"
+                tools:text="01-30 15:28"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_sucess_item_title_padding_left"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_999999"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="@dimen/ewallet_account_recharge_success_item_icon_split_width"
+            android:layout_height="@dimen/ewallet_account_recharge_success_item_icon_split_height"
+            android:background="@color/ewallet_account_recharge_success_item_split2"
+            android:layout_marginLeft="@dimen/ewallet_account_recharge_success_item_icon_split_margin"
+            android:layout_marginRight="@dimen/ewallet_account_recharge_success_item_icon_split_margin"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/ewallet_account_recharge_success_item_icon_width"
+                android:layout_height="@dimen/ewallet_account_recharge_success_item_icon_width"
+                android:src="@drawable/ewallet_ic_commit_normal"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_tv21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预计2小时内到账"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_sucess_item_title_padding_left"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/pasc_text_size_17"
+                android:textColor="@color/ewallet_color_333333"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/ewallet_account_recharge_success_item_icon_split_width"
+                android:layout_height="@dimen/ewallet_account_recharge_success_item_icon_split_height"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_success_item_icon_split_margin"
+                android:layout_marginRight="@dimen/ewallet_account_recharge_success_item_icon_split_margin"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_tv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="01-30 17:28"
+                android:layout_marginLeft="@dimen/ewallet_account_recharge_sucess_item_title_padding_left"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_999999"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_vertical_split_height"
+        android:src="@color/ewallet_primary_divider"
+        android:background="@color/ewallet_white"
+        android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+        android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/ewallet_account_withdraw_success_item_padding_left"
+        android:background="@color/ewallet_white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_account_withdraw_success_item_height"
+            android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/ewallet_withdraw_money_num"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_money"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                tools:text="¥500.00"
+                android:layout_gravity="right"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ewallet_withdraw_fee_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_account_withdraw_success_item_height"
+            android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/ewallet_withdraw_charge_num"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_fee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="right"
+                tools:text="¥0.10"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_account_withdraw_success_item_height"
+            android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="实际到账"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_money_real"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="right"
+                tools:text="¥0.10"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_account_withdraw_success_item_height"
+            android:paddingLeft="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:paddingRight="@dimen/ewallet_account_withdraw_success_item_padding_left"
+            android:layout_marginBottom="@dimen/ewallet_account_withdraw_success_item_padding_top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/ewallet_withdraw_to_which_bank"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:textColor="@color/ewallet_color_666666"/>
+
+            <TextView
+                android:id="@+id/ewallet_withdraw_success_bankName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:layout_gravity="right"
+                android:textSize="@dimen/pasc_text_size_13"
+                tools:text="平安银行储蓄卡(1234)"
+                android:textColor="@color/ewallet_color_666666" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/ewallet_withdraw_success_finish_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_account_balance_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_account_balance_btn_margin_right"
+        android:layout_marginTop="@dimen/ewallet_account_recharge_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="@string/ewallet_finish"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+
+
+</LinearLayout>

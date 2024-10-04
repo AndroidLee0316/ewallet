@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ewallet_type_list_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/ewallet_white">
+
+    <com.pasc.business.ewallet.widget.toolbar.PascToolbar
+        android:id="@+id/ewallet_pay_main_type_select_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_cashier_title_height"
+        android:clickable="true"
+        android:background="@color/ewallet_white_bg"
+        app:ewallet_title="@string/ewallet_pay_type_change"
+        app:ewallet_back_icon="@drawable/ewallet_close_icon"
+        app:ewallet_enable_under_divider="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ewallet_payType_more_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/ewallet_pay_main_dialog_bank_list_margin_bottom"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+        android:listSelector="@color/ewallet_transparent"
+        android:divider="@color/ewallet_transparent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"/>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/ewallet_activity_toolbar" />
+
+        <TextView
+            android:id="@+id/ewallet_send_verify_code_remind_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ewallet_send_verify_code_remind_padding"
+            android:layout_marginTop="@dimen/ewallet_send_verify_code_remind_padding"
+            android:gravity="center_horizontal"
+            android:text="@string/ewallet_send_verify_code_remind"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="@dimen/pasc_text_size_13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_send_verify_code_input_height"
+            android:layout_marginLeft="@dimen/ewallet_send_verify_code_input_margin_left"
+            android:layout_marginRight="@dimen/ewallet_send_verify_code_input_margin_left"
+            android:background="@drawable/ewallet_edit_input_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/ewallet_send_verify_code_input_padding_top"
+            android:paddingLeft="@dimen/ewallet_send_verify_code_input_padding_left"
+            android:paddingRight="@dimen/ewallet_send_verify_code_input_padding_left"
+            android:paddingTop="@dimen/ewallet_send_verify_code_input_padding_top">
+
+            <com.pasc.business.ewallet.common.customview.ClearEditText
+                android:id="@+id/ewallet_send_verify_code_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical|left"
+                android:hint="@string/ewallet_input_verification_code"
+                android:inputType="number"
+                android:longClickable="false"
+                android:textColor="@color/ewallet_color_333333"
+                android:textColorHint="@color/ewallet_hint_color"
+                android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+                android:textSize="@dimen/pasc_text_size_17" />
+
+            <TextView
+                android:id="@+id/ewallet_send_verify_code_count_down"
+                android:layout_marginLeft="@dimen/ewallet_send_verify_code_input_padding_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="100dp"
+                android:gravity="center_vertical|right"
+                android:text="@string/ewallet_fetch_again"
+                android:textColor="@color/ewallet_text_default_color_selector"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ewallet_msg_unReceive_tv"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/ewallet_send_verify_code_unreceive_margin_bottom"
+            android:layout_marginTop="@dimen/ewallet_send_verify_code_unreceive_margin_top"
+            android:text="@string/ewallet_unreceived_verification_code"
+            android:textColor="@color/ewallet_theme_color"
+            android:textSize="@dimen/pasc_text_size_13"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/ewallet_send_verify_code_input_margin_left"
+            android:layout_marginRight="@dimen/ewallet_send_verify_code_input_margin_left"
+            android:layout_marginBottom="@dimen/ewallet_send_verify_code_unreceive_margin_bottom"
+            android:layout_marginTop="@dimen/ewallet_send_verify_code_unreceive_margin_top"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/ewallet_verify_check"
+                android:layout_width="wrap_content"
+                android:text="同意"
+                android:checked="false"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/pasc_text_size_13"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ewallet_default_check_selector"
+                android:button="@null"
+                android:textColor="@color/ewallet_color_999999"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/ewallet_send_verify_code_unreceive_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《银联无卡支付服务协议》"
+                android:textColor="@color/ewallet_theme_color"
+                android:textSize="@dimen/pasc_text_size_13" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.pasc.lib.keyboard.EwalletKeyboardExtraView
+        android:id="@+id/ewallet_send_verify_code_view_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:ewalletKeyboardType="password" />
+
+</RelativeLayout>

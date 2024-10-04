@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ewallet_card_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ewallet_white_bg"
+    android:gravity="center_vertical"
+    android:minHeight="56dp"
+    tools:keep="@layout/ewallet_forget_pwd_card_item">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+        android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="建设银行"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="@dimen/ewallet_pay_common_big_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="6298 **** **** 3659"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="@dimen/ewallet_pay_common_big_size" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+        android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+        android:src="@drawable/ewallet_arrow_right" />
+
+
+</LinearLayout>

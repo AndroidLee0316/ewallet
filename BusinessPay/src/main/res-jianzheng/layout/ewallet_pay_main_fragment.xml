@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="623dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ewallet_main_list_ll"
+        android:background="@color/ewallet_white"
+        android:orientation="vertical">
+
+        <com.pasc.business.ewallet.widget.toolbar.PascToolbar
+            android:id="@+id/ewallet_pay_main_dialog_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_cashier_title_height"
+            android:background="@color/ewallet_white_bg"
+            app:ewallet_back_icon="@drawable/ewallet_close_icon"
+            app:ewallet_enable_under_divider="true"
+            app:ewallet_title="@string/ewallet_pay" />
+
+        <LinearLayout
+            android:id="@+id/ll_pay_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ewallet_pay_main_dialog_pay_to_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/ewallet_pay_main_dialog_pay_to_margin_top"
+                android:visibility="gone"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="@dimen/pasc_text_size_15" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/ewallet_pay_main_dialog_pay_money">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="¥"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/pasc_text_size_27" />
+
+                <TextView
+                    android:id="@+id/ewallet_pay_main_dialog_pay_money_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_pay_money_margin_left"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/pasc_text_size_37" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_cashier_title_height"
+                android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_padding"
+                android:layout_marginTop="@dimen/ewallet_pay_main_dialog_pay_type_margin_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/ewallet_pay_type"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+                <TextView
+                    android:id="@+id/ewallet_pay_main_dialog_pay_type_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_type_remind_margin_left"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/ewallet_error_highlight_text"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+                <TextView
+                    android:id="@+id/ewallet_pay_main_dialog_pay_type_remind2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_type_remind2_margin_left"
+                    android:background="@drawable/ewallet_pay_remind_bg"
+                    android:textColor="@color/ewallet_error_highlight_text"
+                    android:textSize="@dimen/pasc_text_size_11" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_vertical_split_height"
+                android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_padding"
+                android:src="@color/ewallet_primary_divider" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ewallet_pay_main_none_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ewallet_pay_main_dialog_bank_list_height"
+            android:layout_marginBottom="@dimen/ewallet_pay_main_dialog_bank_list_margin_bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rv_none_card_add"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_pay_main_dialog_item_pay_type_height"
+                android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="暂无可用支付方式"
+                    android:textSize="@dimen/pasc_text_size_17" />
+
+                <ImageView
+                    android:id="@+id/iv_none_card_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ewallet_pay_main_dialog_padding"
+                    android:src="@drawable/ewallet_arrow_right" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_vertical_split_height"
+                android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_padding"
+                android:background="@color/ewallet_primary_divider" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ewallet_payType_rv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/ewallet_pay_main_dialog_bank_list_margin_bottom"
+                android:divider="@color/ewallet_transparent"
+                android:fadingEdge="none"
+                android:listSelector="@color/ewallet_transparent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/ewallet_pay_main_dialog_commit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_account_btn_height"
+                android:layout_margin="@dimen/ewallet_pay_main_dialog_padding"
+                android:background="@drawable/ewallet_btn_default_selector"
+                android:gravity="center"
+                android:text="@string/ewallet_sure_to_pay"
+                android:enabled="false"
+                android:textColor="@color/ewallet_white_bg"
+                android:textSize="@dimen/pasc_text_size_17" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/ewallet_pay_main_type_select"
+        android:visibility="gone" />
+</RelativeLayout>

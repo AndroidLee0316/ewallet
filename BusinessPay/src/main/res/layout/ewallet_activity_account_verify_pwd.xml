@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+                android:background="@color/ewallet_white_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <LinearLayout
+        android:layout_below="@id/ewallet_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/ewallet_verify_password_title"
+            android:layout_marginTop="72dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/ewallet_color_333333"
+            android:text="@string/ewallet_add_bankcard"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="@string/ewallet_verify_when_pay2"
+            android:textColor="@color/ewallet_color_999999"
+            android:textSize="15sp" />
+
+        <com.pasc.lib.keyboard.EwalletPassWordView
+            android:id="@+id/ewallet_verify_password_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+    <com.pasc.lib.keyboard.EwalletPwdKeyboardView
+        android:id="@+id/ewallet_verify_password_keyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ewalletKeyboardType="password"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout >

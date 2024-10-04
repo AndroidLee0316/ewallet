@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/ewallet_white_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="6dp">
+
+        <com.pasc.business.ewallet.common.customview.ClearEditText
+            android:id="@+id/ewallet_edit_search"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/ewallet_pay_search_edit_bg"
+            android:drawableLeft="@drawable/ewallet_search_edit_icon"
+            android:gravity="left|center_vertical"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLength="16"
+            android:hint="请输入需要搜索的账单名称"
+            android:maxEms="16"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#c7c7c7"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ewallet_pay_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:visibility="visible"
+            android:textColor="@color/ewallet_theme_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#E0E0E0"
+        android:layout_height="@dimen/ewallet_toolbar_devider_height"/>
+    <FrameLayout
+        android:id="@+id/ewallet_pay_bill_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

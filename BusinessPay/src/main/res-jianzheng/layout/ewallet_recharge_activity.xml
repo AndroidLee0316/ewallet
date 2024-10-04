@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ewallet_white"
+        android:paddingLeft="15dp"
+        android:paddingTop="17dp"
+        android:text="充值金额"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/ewallet_account_recharge_num_et_height"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="19dp"
+        android:background="@color/ewallet_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:text="@string/ewallet_recharge_num_type"
+            android:textColor="@color/ewallet_color_333333"
+            android:layout_marginRight="5dp"
+            android:textSize="@dimen/pasc_text_size_27" />
+
+        <EditText
+            android:id="@+id/ewallet_account_recharge_num_et"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:background="@android:color/transparent"
+            android:inputType="numberDecimal"
+            tools:text="1"
+            android:longClickable="false"
+            android:textColor="@color/ewallet_color_333333"
+            android:textCursorDrawable="@drawable/ewallet_edit_text_cursor_drawable"
+            android:textSize="@dimen/pasc_text_size_37" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ewallet_recharge_commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_account_balance_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_account_balance_btn_margin_right"
+        android:layout_marginTop="@dimen/ewallet_account_recharge_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="@string/ewallet_recharge"
+        android:enabled="false"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+</LinearLayout>

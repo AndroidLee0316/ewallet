@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base lib theme. -->
+    <style name="EwalletTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="EwalletAppThemeTrans" parent="EwalletTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ewallet_anim_fade</item>
+    </style>
+
+    <style name="ewallet_anim_fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/ewallet_anim_fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/ewallet_anim_fade_out_ac</item>
+        <item name="android:activityCloseEnterAnimation">@anim/ewallet_anim_fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/ewallet_anim_fade_out_ac</item>
+    </style>
+
+    <!--<style name="anim_enter_right_exit_left" parent="android:Animation">-->
+        <!--<item name="android:windowEnterAnimation">@anim/ewallet_right_to_left_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/ewallet_right_to_left_out</item>-->
+    <!--</style>-->
+
+    <!--<style name="anim_enter_bottom_exit_left" parent="android:Animation">-->
+        <!--<item name="android:windowEnterAnimation">@anim/ewallet_push_bottom_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/ewallet_right_to_left_out</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="anim_enter_right_exit_bottom" parent="android:Animation">-->
+        <!--<item name="android:windowEnterAnimation">@anim/ewallet_right_to_left_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/ewallet_push_bottom_out</item>-->
+    <!--</style>-->
+
+    <!--<style name="anim_enter_bottom_exit_bottom" parent="android:Animation">-->
+        <!--<item name="android:windowEnterAnimation">@anim/ewallet_push_bottom_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/ewallet_push_bottom_out</item>-->
+    <!--</style>-->
+
+    <style name="EwalletBottomDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/EwalletBottomDialogAnimation</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+</resources>

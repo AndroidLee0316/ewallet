@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="6dp"
+    android:background="@color/ewallet_white_bg"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    >
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ewallet_pay_tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ewallet_primary_bg"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:textColor="@color/ewallet_color_666666"
+        android:textSize="15sp">
+
+    </TextView>
+</RelativeLayout>

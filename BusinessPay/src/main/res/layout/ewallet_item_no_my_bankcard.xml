@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:keep="@layout/ewallet_item_no_my_bankcard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:gravity="center"
+        android:background="@drawable/ewallet_bg_no_my_bankcard">
+
+        <com.pasc.business.ewallet.common.customview.DrawableTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:text="@string/ewallet_no_my_bankcard"
+            android:textSize="@dimen/pasc_text_size_15"
+            android:textColor="@color/ewallet_color_999999"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/ewallet_ic_no_my_bankcard"/>
+
+    </LinearLayout>
+
+</LinearLayout >

@@ -1,0 +1,17 @@
+<resources>
+  <!--银联绑卡-->
+  <string name="ewallet_add_unionpay_card_desc">绑定银行卡，即享银联快捷支付</string>
+  <string name="ewallet_input_unionpay_card_tip">请输入本人的银行卡号</string>
+  <string name="ewallet_choose_bankcard">选择银行卡</string>
+  <string name="ewallet_pay_by_new_bank_card">使用新银行卡付款</string>
+  <string name="ewallet_bank_card_list_item">%1$s（%2$s）</string>
+  <string name="ewallet_bankcard_quick_pay">银行卡快捷支付</string>
+  <string name="ewallet_bankcard_reserved_phone">银行卡预留手机号（$s）</string>
+  <string name="ewallet_input_verify_code">请输入短信验证码</string>
+  <string name="ewallet_get_verify_code">获取验证码</string>
+  <string name="ewallet_confirm_pay">确认支付</string>
+  <string name="ewallet_retry_send_verify_code">%ds后重试</string>
+  <string name="ewallet_retry_get_verify_code">重新获取</string>
+
+  <string name="ewallet_pay_waiting_tip">支付中…</string>
+</resources>

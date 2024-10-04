@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutHide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgHide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ewallet_keyboard_hide_img" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layoutSafe"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/ewallet_keyborad_bg"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ewallet_pay_keyboard_name"
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/imgPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="18dp"
+            android:paddingLeft="18dp"
+            android:src="@drawable/ewallet_ic_down_arrow" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/ewallet_keyborad_bg" />
+    <!-- 输入键盘 -->
+    <com.pasc.business.ewallet.widget.NoRecycleGridView
+        android:id="@+id/gv_keybord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ewallet_keyborad_bg"
+        android:horizontalSpacing="1px"
+        android:numColumns="3"
+        android:verticalSpacing="1px" />
+
+
+</LinearLayout>

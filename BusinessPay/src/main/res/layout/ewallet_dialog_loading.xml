@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ewallet_dialog_bg_loading"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="21dp">
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress"-->
+<!--        android:layout_width="36dp"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:indeterminateBehavior="repeat"-->
+<!--        android:indeterminate="true"-->
+<!--        android:indeterminateDuration="1000"-->
+<!--        android:indeterminateDrawable="@drawable/ewallet_loading_anim_x"-->
+<!--        android:indeterminateOnly="true" />-->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="36dp"
+        android:visibility="visible"
+        android:layout_height="36dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ewallet_loading_icon" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:maxEms="9"
+        android:minWidth="74dp"
+        android:text="I am Loading..."
+        android:textColor="#deffffff"
+        android:textSize="17sp" />
+
+</LinearLayout>

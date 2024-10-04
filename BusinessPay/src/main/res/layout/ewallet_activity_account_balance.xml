@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/ewallet_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:keep="@layout/ewallet_activity_account_balance">
+
+    <com.pasc.business.ewallet.widget.toolbar.PascToolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_toolbar_title_height"
+        android:background="@color/ewallet_white_bg"
+        app:ewallet_title_text_color="@color/ewallet_color_333333"
+        app:ewallet_title_text_size="@dimen/ewallet_toolbar_title_text_size"
+        app:ewallet_back_icon="@drawable/ewallet_toolbar_ic_back"
+        app:ewallet_under_divider_height="@dimen/ewallet_toolbar_devider_height"
+        app:ewallet_title="@string/ewallet_balance" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ewallet_create_account_icon"
+        android:layout_marginTop="@dimen/ewallet_account_balance_balance_icon_margin_top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/pasc_text_size_13"
+        android:textColor="@color/ewallet_color_999999"
+        android:text="@string/ewallet_balance_hint"
+        android:layout_marginTop="@dimen/ewallet_account_balance_balance_hint_margin_top"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/pasc_text_size_37"
+        android:textColor="@color/ewallet_theme_color"
+        android:layout_marginTop="@dimen/ewallet_account_balance_balance_num_margin_top"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="@dimen/ewallet_home_txt_size"
+        tools:text="@string/ewallet_balance_frozen_num"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_account_balance_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_account_balance_btn_margin_right"
+        android:layout_marginTop="@dimen/ewallet_account_balance_recharge_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="@string/ewallet_recharge"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_account_balance_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_account_balance_btn_margin_right"
+        android:layout_marginTop="@dimen/ewallet_account_balance_withdraw_margin_top"
+        android:background="@drawable/ewallet_btn_default_white_selector"
+        android:text="@string/ewallet_withdraw"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+
+</LinearLayout>

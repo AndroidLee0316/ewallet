@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layout_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/iv_empty_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ewallet_error_status_icon"
+        android:layout_above="@+id/tv_empty_tips"
+        />
+
+    <TextView
+        android:id="@+id/tv_empty_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="无法连接网络，请检查网络设置"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/tv_retryload"
+        android:layout_width="116dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tv_empty_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="点击刷新"
+        android:background="@drawable/ewallet_net_error_retry_bg"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="17sp"
+        />
+</RelativeLayout>

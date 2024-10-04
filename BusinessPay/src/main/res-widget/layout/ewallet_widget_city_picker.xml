@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line_picker"
+    android:layout_width="fill_parent"
+    android:layout_height="220dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <!-- province -->
+    <com.pasc.business.ewallet.widget.dialog.bottompicker.widget.NumberPicker
+        android:id="@+id/province"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <!-- city -->
+    <com.pasc.business.ewallet.widget.dialog.bottompicker.widget.NumberPicker
+        android:id="@+id/city"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <!-- country -->
+    <com.pasc.business.ewallet.widget.dialog.bottompicker.widget.NumberPicker
+        android:id="@+id/country"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:visibility="visible"
+        android:focusableInTouchMode="true" />
+
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+
+def toJavaStringValue(String value) {
+    return "\"" + value + "\""
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "${rootProject.ext.myapplicationId}"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        buildConfigField "String", "WX_APP_ID", toJavaStringValue("${rootProject.ext.wxPayAppId}")
+        ndk {
+            abiFilters "armeabi-v7a","x86"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+
+        release {
+            keyAlias "${rootProject.ext.mykeyAlias}"
+            keyPassword "${rootProject.ext.mykeyPassword}"
+            storeFile file("${rootProject.ext.mystoreFile}")
+            storePassword "${rootProject.ext.mystorePassword}"
+            v1SigningEnabled true
+            v2SigningEnabled true
+
+        }
+
+        debug {
+            keyAlias "${rootProject.ext.mykeyAlias}"
+            keyPassword "${rootProject.ext.mykeyPassword}"
+            storeFile file("${rootProject.ext.mystoreFile}")
+            storePassword "${rootProject.ext.mystorePassword}"
+            v2SigningEnabled false
+        }
+    }
+
+
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            buildConfigField "boolean", "PRODUCT_MODE", "true"
+            buildConfigField "int", "PRODUCT_FLAVORS_TYPE", "1"
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string","demo_app_name","\"$res_name\""
+        }
+
+        debug {
+            minifyEnabled false
+            buildConfigField "boolean", "PRODUCT_MODE", "false"
+            buildConfigField "int", "PRODUCT_FLAVORS_TYPE", "2"
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string","demo_app_name","\"$res_name\""
+
+        }
+    }
+
+    if(isAar == 'true') {
+        println("使用aar")
+//        sourceSets {
+//            main {
+//                jniLibs.srcDirs = ['libs']
+//            }
+//        }
+
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    } else {
+        println("使用源码")
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "io.reactivex.rxjava2:rxjava:${rxjava2Version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroid2Version}"
+    implementation "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+   // implementation "com.pasc.lib:UnionPay:${unionPayVersion}"
+    implementation project(':UnionPay')
+//    if (isAar == 'true') {
+//        implementation "com.pasc.business:ewallet:${versionMaven}"
+//        implementation "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:${wxchatVersion}"
+//        implementation "org.bouncycastle:bcprov-jdk16:${bcprovVersion}"
+//    } else {
+        implementation project(':BusinessPay')
+//    }
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+    implementation "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+    implementation "com.squareup.okhttp3:okhttp:${okhttp3Version}"
+    implementation "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit2Version}"
+    implementation project(':snPay')
+    implementation project(':cmbPay')
+//    implementation "com.pasc.lib:snPay:${snVersion}"
+//    implementation "com.pasc.lib:cmbPay:${cmbVersion}"
+}

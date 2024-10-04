@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ewallet_primary_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ewallet_pay_manage_modify_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ewallet_btn_default_white_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/ewallet_amend_password"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ewallet_arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/ewallet_primary_divider" />
+
+        <RelativeLayout
+            android:id="@+id/ewallet_pay_manage_forgot_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ewallet_btn_default_white_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="忘记支付密码"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ewallet_arrow_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="visible"
+            android:layout_marginLeft="15dp"
+            android:background="@color/ewallet_primary_divider" />
+
+        <RelativeLayout
+            android:id="@+id/ewallet_pay_manage_logout_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:background="@drawable/ewallet_btn_default_white_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="注销钱包账户"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ewallet_arrow_right" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

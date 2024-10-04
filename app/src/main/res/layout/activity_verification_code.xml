@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <include layout="@layout/ewallet_activity_toolbar" />
+  <TextView
+      android:id="@+id/ewallet_phone_desc"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:gravity="center_vertical"
+      android:paddingStart="15dp"
+      android:visibility="gone"
+      android:text="银行卡预留手机号（136****2300）"
+      android:textColor="@color/ewallet_color_333333"
+      android:textSize="15sp" />
+  <RelativeLayout
+      android:id="@+id/rl_verify_code"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/white">
+    <com.pasc.ewallet.dev.pay.unionpay.widget.FormatEditText
+        android:id="@+id/et_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/tv_get_verify_code"
+        android:background="@null"
+        android:hint="@string/ewallet_input_verify_code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:textColor="@color/black_333333"
+        android:textColorHint="@color/ewallet_hint_color"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/tv_get_verify_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_centerVertical="true"
+        android:alpha="1.0"
+        android:enabled="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/ewallet_get_verify_code"
+        android:textColor="@color/pasc_primary"
+        android:textSize="17sp" />
+  </RelativeLayout>
+  <Button
+      android:id="@+id/ewallet_confirm_pay"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="30dp"
+      android:background="@drawable/ewallet_btn_default_selector"
+      android:enabled="false"
+      android:text="@string/ewallet_confirm_pay"
+      style="?android:attr/borderlessButtonStyle"
+      android:textColor="@color/ewallet_white_bg"
+      android:textSize="17sp" />
+</LinearLayout>

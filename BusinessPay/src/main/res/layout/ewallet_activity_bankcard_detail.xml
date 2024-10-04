@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ewallet_bank_detail_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            >
+            <ImageView
+                android:id="@+id/ewallet_bank_detail_bg"
+                android:layout_width="match_parent"
+                android:src="@drawable/ewallet_bg_no_bank_card"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"/>
+
+            <com.pasc.business.ewallet.common.customview.CircleImageView
+                android:id="@+id/ewallet_bank_detail_logo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="4dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ewallet_ic_no_bank_card" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ewallet_bank_detail_logo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ewallet_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/ewallet_white_bg"
+                    android:textSize="@dimen/ewallet_bank_normal_size"
+                    tools:text="平安银行" />
+
+                <TextView
+                    android:id="@+id/ewallet_bank_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.6"
+                    android:textColor="@color/ewallet_white_bg"
+                    android:textSize="@dimen/ewallet_bank_small_size"
+                    tools:text="@string/ewallet_home_bank_card_simple_type" />
+
+
+                <TextView
+                    android:id="@+id/ewallet_bank_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:textColor="@color/ewallet_white_bg"
+                    android:textSize="@dimen/ewallet_bank_cardno_size"
+                    tools:text="@string/ewallet_home_bank_card_simple_id" />
+
+                <TextView
+                    android:id="@+id/ewallet_bank_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/ewallet_white_bg"
+                    android:textSize="@dimen/ewallet_bank_small_size"
+                    tools:text="李*慧" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ewallet_water_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ewallet_ic_bank_card_bg_logo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/ewallet_bank_detail_top_layout"
+            android:background="@color/ewallet_white_bg"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="178dp"
+            android:background="@drawable/ewallet_white_corner_bg"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ewallet_bankcard_trade_limit"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/ewallet_bank_normal_size" />
+
+                <TextView
+                    android:id="@+id/ewallet_single_limit_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/ewallet_bank_normal_size"
+                    tools:text="¥50,000.00" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ewallet_divide_line_height"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/ewallet_primary_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ewallet_bankcard_day_limit"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/ewallet_bank_normal_size" />
+
+                <TextView
+                    android:id="@+id/ewallet_day_limit_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="@dimen/ewallet_bank_normal_size"
+                    tools:text="¥50,000.00" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

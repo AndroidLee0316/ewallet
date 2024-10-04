@@ -1,0 +1,10 @@
+<resources>
+
+
+    <dimen name="picker_text_size">17sp</dimen>
+
+    <dimen name="picker_un_text_size">15sp</dimen>
+
+    <dimen name="picker_line_height">0.5dp</dimen>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="ewallet_white_bg" >#FFFFFF</color >
+
+    <!--背景颜色-->
+    <color name="ewallet_primary_bg" >#F4F4F4</color >
+
+    <!--分割线-->
+    <color name="ewallet_primary_divider" >#E8E8E8</color >
+
+    <!-- 基本颜色 -->
+    <color name="ewallet_color_999999" >#999999</color >
+    <color name="ewallet_color_666666" >#666666</color >
+    <color name="ewallet_color_333333" >#333333</color >
+
+    <!--文字颜色-->
+    <color name="ewallet_third_text" >#151515</color >
+    <color name="ewallet_error_highlight_text" >#FF4D4F</color >
+    <color name="ewallet_hint_color" >#C7C7C7</color >
+    <!--60%透明度-->
+    <color name="ewallet_pay_bg_color">#60000000</color>
+
+    <!--button颜色-->
+    <color name="ewallet_primary_btn_enable" >@color/ewallet_theme_color</color >
+    <color name="ewallet_primary_btn" >@color/ewallet_disable_theme_color</color >
+
+
+
+    <color name="ewallet_home_title_bg_color">#17285A</color>
+    <color name="ewallet_home_withdraw_stroke">#FFFFFF</color>
+
+
+
+    <color name="ewallet_account_recharge_success_item_split2">#DDDDDD</color>
+
+    <color name="ewallet_my_bankcard_item_no_bankcard_start_bg">#F9F9F9</color>
+    <color name="ewallet_my_bankcard_item_no_bankcard_end_bg">#F2F2F2</color>
+
+</resources>

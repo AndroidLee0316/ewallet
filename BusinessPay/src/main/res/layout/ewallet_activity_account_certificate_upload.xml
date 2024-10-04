@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ewallet_primary_bg"
+              xmlns:tools="http://schemas.android.com/tools" >
+    <include layout="@layout/ewallet_activity_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarSize="0dp"
+        android:fadeScrollbars="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ewallet_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="18dp"
+                    android:gravity="left"
+                    android:lineSpacingExtra="6dp"
+                    android:maxLines="2"
+                    android:text="@string/ewallet_info_upload_desc"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="15sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="19dp"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="6dp"-->
+                    <!--android:gravity="left"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:text="@string/ewallet_info_upload_desc2"-->
+                    <!--android:textColor="@color/ewallet_primary_text"-->
+                    <!--android:textSize="15sp" />-->
+
+                <RelativeLayout
+                    android:background="@drawable/ewallet_image_bg"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.pasc.business.ewallet.widget.image.RoundedImageView
+                        app:ewallet_riv_corner_radius="5dp"
+                        android:id="@+id/ewallet_certificate_image_front"
+                        android:layout_width="202dp"
+                        android:layout_height="130dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ewallet_ic_face_front" />
+
+                    <ImageView
+                        android:id="@+id/ewallet_certificate_image_front_upload"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ewallet_ic_face_upload" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/ewallet_idcard_front_upload"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:background="@drawable/ewallet_image_bg"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.pasc.business.ewallet.widget.image.RoundedImageView
+                        app:ewallet_riv_corner_radius="5dp"
+                        android:id="@+id/ewallet_certificate_image_back"
+                        android:layout_width="202dp"
+                        android:layout_height="130dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ewallet_ic_face_back" />
+
+                    <ImageView
+                        android:id="@+id/ewallet_certificate_image_back_upload"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ewallet_ic_face_upload" />
+                </RelativeLayout >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/ewallet_idcard_back_upload"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="13sp" />
+
+            </LinearLayout >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="@string/ewallet_takephoto_tip"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" >
+
+                    <ImageView
+                        android:layout_width="77.6dp"
+                        android:layout_height="64.8dp"
+                        android:src="@drawable/ewallet_ic_face_correct" />
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_width="77.6dp"
+                        android:layout_height="64.8dp"
+                        android:src="@drawable/ewallet_ic_face_lack"/>
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_width="77.6dp"
+                        android:layout_height="64.8dp"
+                        android:src="@drawable/ewallet_ic_face_blur" />
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_width="77.6dp"
+                        android:layout_height="64.8dp"
+                        android:src="@drawable/ewallet_ic_face_gleam" />
+                </LinearLayout >
+
+                <TextView
+                    android:id="@+id/ewallet_certificate_takephoto_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="left"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="@string/ewallet_takephoto_suggestion1"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="13sp" />
+
+            </LinearLayout >
+        </LinearLayout >
+    </ScrollView >
+    <Button
+        android:id="@+id/ewallet_certificate_upload_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:enabled="false"
+        android:background="@drawable/ewallet_btn_rect_next_selector"
+        android:text="@string/ewallet_next"
+        android:textColor="@color/ewallet_white_bg"
+        style="?android:attr/borderlessButtonStyle"
+        android:textSize="17sp" />
+
+</LinearLayout >

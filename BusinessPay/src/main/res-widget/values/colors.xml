@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ewallet_white">#FFFFFF</color>
+    <color name="ewallet_transparent">#00000000</color>
+    <!--透明-->
+    <color name="ewallet_transparent_00000000">#00000000</color>
+    <color name="ewallet_transparent_half">#30000000</color>
+    <!-- 说明性/标签文本色 -->
+    <color name="ewallet_dialog_explain_text">#999999</color>
+
+    <!--widget组件-->
+    <!--覆盖-->
+    <color name="ewallet_dialog_primary">@color/ewallet_color_333333</color>
+    <color name="ewallet_dialog_cancel_text">#3B68E9</color>
+    <color name="ewallet_dialog_confirm_text">#3B68E9</color>
+
+
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/ewallet_primary_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="127dp"
+        android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+        android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ewallet_pay_recored_top_drawable"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="入账金额"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#2E332F"
+            android:textSize="@dimen/ewallet_pay_common_big_size" />
+
+        <TextView
+            android:id="@+id/ewallet_pay_yue_record_detail_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            tools:text="+100.00"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="32sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+        android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+        android:background="@drawable/ewallet_dot_line">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="139dp"
+        android:layout_marginLeft="@dimen/ewallet_pay_common_padding"
+        android:layout_marginRight="@dimen/ewallet_pay_common_padding"
+        android:background="@drawable/ewallet_pay_recored_bottom_drawable"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/ewallet_pay_common_padding"
+            android:paddingRight="@dimen/ewallet_pay_common_padding"
+            android:layout_marginTop="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易类型"
+                android:textColor="@color/ewallet_color_999999"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+            <TextView
+                android:id="@+id/ewallet_pay_yue_record_detail_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:gravity="end|center_vertical"
+                android:maxLines="2"
+                tools:text="收入"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/ewallet_pay_common_padding"
+            android:paddingRight="@dimen/ewallet_pay_common_padding"
+            android:layout_marginTop="@dimen/ewallet_pay_common_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易时间"
+                android:textColor="@color/ewallet_color_999999"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+            <TextView
+                android:id="@+id/ewallet_pay_yue_record_detail_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="2018-06-04 11:56"
+                android:layout_marginLeft="12dp"
+                android:gravity="end|center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/ewallet_pay_common_padding"
+            android:paddingRight="@dimen/ewallet_pay_common_padding"
+            android:layout_marginTop="@dimen/ewallet_pay_common_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="流水账单"
+                android:textColor="@color/ewallet_color_999999"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+            <TextView
+                android:id="@+id/ewallet_pay_yue_record_detail_transysno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="20180604wdsz759248789"
+                android:layout_marginLeft="12dp"
+                android:gravity="end|center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/ewallet_color_333333"
+                android:textSize="@dimen/ewallet_pay_common_mid_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/ewallet_primary_bg"
+    android:layout_height="match_parent">
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="注销成功后账户信息将产生如下变更"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="13sp"
+        android:layout_height="44dp"/>
+
+    <LinearLayout
+        android:id="@+id/ewallet_logout_verify_pwd"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:minHeight="76dp"
+        android:background="@drawable/ewallet_btn_default_white_selector"
+        android:paddingLeft="15dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+         <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="验证支付密码"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/ewallet_color_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="通过输入支付密码完成注销"
+                    android:textSize="13sp"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ewallet_arrow_right"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:background="@color/ewallet_primary_divider"
+        android:layout_height="@dimen/ewallet_divide_line_height"/>
+    <LinearLayout
+        android:id="@+id/ewallet_logout_verify_id"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:minHeight="76dp"
+        android:background="@drawable/ewallet_btn_default_white_selector"
+        android:paddingLeft="15dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="验证身份信息"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/ewallet_color_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="通过输入姓名、身份证号、短信验证码完成注销"
+                android:textSize="13sp"
+                android:textColor="@color/ewallet_color_999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ewallet_arrow_right"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

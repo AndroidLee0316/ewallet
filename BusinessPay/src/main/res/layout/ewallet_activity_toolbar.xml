@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pasc.business.ewallet.widget.toolbar.PascToolbar
+    android:id="@+id/ewallet_activity_toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ewallet_toolbar_title_height"
+    android:background="@color/ewallet_white_bg"
+    app:ewallet_title=""
+    app:ewallet_title_text_color="@color/ewallet_color_333333"
+    app:ewallet_title_text_size="@dimen/ewallet_toolbar_title_text_size"
+    app:ewallet_back_icon="@drawable/ewallet_back_icon"
+    app:ewallet_under_divider_height="@dimen/ewallet_toolbar_devider_height" />

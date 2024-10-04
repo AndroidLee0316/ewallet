@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ewallet_pay_date_tv_date"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ewallet_pay_common_title_height"
+    android:background="@color/ewallet_primary_bg"
+    android:paddingLeft="@dimen/ewallet_pay_common_padding"
+    android:paddingTop="@dimen/ewallet_pay_common_padding"
+    android:textColor="@color/ewallet_color_999999"
+    android:textSize="@dimen/ewallet_pay_common_small_size"
+    android:visibility="gone" />

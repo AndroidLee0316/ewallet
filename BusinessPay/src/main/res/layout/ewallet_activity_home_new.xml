@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/ewallet_white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ewallet_home_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_toolbar_title_height"
+        android:background="@color/ewallet_home_bg">
+
+        <ImageView
+            android:id="@+id/ewallet_home_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="11dp"
+            android:background="@drawable/ewallet_widget_selector_button_common"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp"
+            android:src="@drawable/ewallet_white_back_icon" />
+
+        <TextView
+            android:id="@+id/ewallet_home_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/ewallet_white_bg"
+            android:textSize="@dimen/ewallet_toolbar_title_text_size"
+            tools:text="@string/ewallet_home_title" />
+
+        <ImageView
+            android:id="@+id/ewallet_home_bill_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="52dp"
+            android:src="@drawable/ewallet_ic_home_bill" />
+
+        <ImageView
+            android:id="@+id/ewallet_home_setting_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ewallet_ic_home_setting" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/ewallet_home_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:background="@color/ewallet_home_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="可用余额"
+                    android:alpha="0.6"
+                    android:textColor="@color/ewallet_white"
+                    android:textSize="13sp" />
+
+                <com.pasc.business.ewallet.common.customview.FontTextView
+                    android:id="@+id/ewallet_balance_money_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    tools:text="¥ 23.34"
+                    android:textColor="@color/ewallet_white"
+                    android:textSize="37sp" />
+
+                <TextView
+                    android:id="@+id/ewallet_balance_frozen_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    tools:text="冻结金额：¥300.00"
+                    android:alpha="0.6"
+                    android:textColor="@color/ewallet_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ewallet_home_coin_icon"
+                android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <com.pasc.business.ewallet.widget.NoRecycleListView
+                android:id="@+id/ewallet_item_listView"
+                android:layout_width="match_parent"
+                android:dividerHeight="1px"
+                android:divider="@color/ewallet_primary_divider"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ewallet_home_water_icon"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

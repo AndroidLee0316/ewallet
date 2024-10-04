@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar" />
+
+    <ScrollView
+        android:id="@+id/ewallet_sv"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ewallet_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/ewallet_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:id="@+id/ewallet_bankcard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ewallet_question_tip"
+                    android:text="账户安全卡"
+                    android:textColor="@color/ewallet_color_666666"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+                <TextView
+                    android:id="@+id/ewallet_bankcard_changeBind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ewallet_change_bind_icon"
+                    android:text="更换安全卡"
+                    android:textColor="@color/ewallet_theme_color"
+                    android:textSize="@dimen/pasc_text_size_13" />
+            </RelativeLayout>
+
+            <com.pasc.business.ewallet.widget.NoRecycleListView
+                android:id="@+id/ewallet_safe_card_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+
+            <LinearLayout
+                android:id="@+id/ewallet_safe_empty"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ewallet_bg_no_my_bankcard"
+                android:gravity="center">
+
+                <com.pasc.business.ewallet.common.customview.DrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/ewallet_ic_no_my_bankcard"
+                    android:gravity="center_horizontal"
+                    android:text="暂未添加银行卡"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ewallet_add_safe_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ewallet_btn_add_my_bankcard"
+                android:gravity="center">
+
+                <com.pasc.business.ewallet.common.customview.DrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="添加账户安全银行卡"
+                    android:textColor="@color/ewallet_theme_color"
+                    android:textSize="@dimen/pasc_text_size_17" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/ewallet_divider"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#F2F2F2"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/ewallet_bank_header_title"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:paddingTop="18dp"
+                android:text="支付卡"
+                android:textColor="@color/ewallet_color_666666"
+                android:textSize="15sp" />
+
+            <com.pasc.business.ewallet.widget.NoRecycleListView
+                android:id="@+id/ewallet_pay_card_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ewallet_pay_empty"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ewallet_bg_no_my_bankcard"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <com.pasc.business.ewallet.common.customview.DrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/ewallet_ic_no_my_bankcard"
+                    android:gravity="center_horizontal"
+                    android:text="暂无支付银行卡"
+                    android:textColor="@color/ewallet_color_999999"
+                    android:textSize="@dimen/pasc_text_size_15" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ewallet_add_pay_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ewallet_btn_add_my_bankcard"
+                android:gravity="center">
+
+                <com.pasc.business.ewallet.common.customview.DrawableTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="添加支付银行卡"
+                    android:textColor="@color/ewallet_theme_color"
+                    android:textSize="@dimen/pasc_text_size_17" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/status_error"
+        android:background="@color/ewallet_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_error_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:src="@drawable/ewallet_error_status_icon" />
+
+        <TextView
+            android:id="@+id/tv_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="网络不佳，请检查网络设置"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/btn_footer_retry"
+            android:layout_width="116dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textColor="#333333"
+            android:textSize="17sp"
+            android:background="@drawable/ewallet_btn_next_un_highlight_selector"
+            android:layout_height="44dp" />
+    </LinearLayout>
+
+</LinearLayout>

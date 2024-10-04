@@ -1,0 +1,240 @@
+ext {
+    versionName = "1.0.0"
+    versionCode = 63
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    // App dependencies
+    supportLibraryVersion = '28.0.0'
+
+    // net
+    retrofit2Version = '2.4.0'
+    okhttp3Version = '3.11.0'
+    gsonVersion = '2.8.2'
+    rxjava2Version = '2.1.12'
+    rxandroid2Version = '2.0.2'
+    wxchatVersion = '5.5.8'
+    aliVersion = '1.0.0'
+    unionPayVersion = '1.0.0'
+    snVersion = '1.0.0'
+    cmbVersion = '1.1.3'
+    bcprovVersion = '1.46'
+    bcprovVersion15 = '1.55'
+
+    //签名信息
+    if (currentApkDemoType == zyzhTestApkDemoType) {
+        myapplicationId = "ceshi.com.zy.zh.zyzh"
+        mykeyAlias = 'zyzh'
+        mykeyPassword = 'zyzh123'
+        mystoreFile = '../keystoreDir/zyzh.jks'
+        mystorePassword = 'zyzh123'
+        wxPayAppId="wx0cee08ba586c9378"
+        res_name="jzb紫云"
+    } else if (currentApkDemoType == citycardApkDemoType) {
+        myapplicationId = "com.pa.citycard"
+        mykeyAlias = 'smcc'
+        mykeyPassword = 'smcc2018'
+        mystoreFile = '../keystoreDir/smcc.jks'
+        mystorePassword = '123456'
+        wxPayAppId="wxa6ba1f6f65054953"
+        res_name="jzb市民卡"
+    }else if (currentApkDemoType == wxcardApkDemoType) {
+        myapplicationId = "com.wxsmk.wuxi"
+        mykeyAlias = 'hongcheng.keystore'
+        mykeyPassword = 'hongcheng.keystore'
+        mystoreFile = '../keystoreDir/hongcheng.keystore'
+        mystorePassword = 'hongcheng.keystore'
+        wxPayAppId="wx896a7dc2b4fb0d0d"
+        res_name="jzb无锡"
+    } else if (currentApkDemoType == zaoZhuangApkDemoType) {
+        myapplicationId = "com.vplusinfo.smartcity"
+        mykeyAlias = 'smartcity'
+        mykeyPassword = 'smartcity'
+        mystoreFile = '../keystoreDir/smartcity_app.jks'
+        mystorePassword = 'smartcity'
+        wxPayAppId="wx4d1741be98a12388"
+        res_name="jh枣庄"
+
+    }else if (currentApkDemoType == weiHaiApkDemoType) {
+        myapplicationId = "com.whmstr.whsmk"
+        mykeyAlias = 'whsmk'
+        mykeyPassword = '1qwe2wer'
+        mystoreFile = '../keystoreDir/whsmk.jks'
+        mystorePassword = '1qwe2wer'
+        wxPayAppId="wx25901a3a52942845"
+        res_name="jzb威海"
+    } else if (currentApkDemoType == huangshanApkDemoType) {
+        myapplicationId = "com.pingan.huangshan"
+        mykeyAlias = 'huangshan'
+        mykeyPassword = 'huangshan2020'
+        mystoreFile = '../keystoreDir/huangshan.jks'
+        mystorePassword = 'huangshan2020'
+        wxPayAppId="wx174a5f32c5770a12"
+        res_name="jzb黄山"
+    } else if (currentApkDemoType == mianyangApkDemoType) {
+        myapplicationId = "com.pingan.imianyang"
+        mykeyAlias = 'smt'
+        mykeyPassword = 'pingan@mianyang'
+        mystoreFile = '../keystoreDir/mianyang.keystore'
+        mystorePassword = 'pingan@mianyang'
+        wxPayAppId="wxdbfe04b195afaff5"
+        res_name="jzb绵阳"
+    } else if (currentApkDemoType == nantongApkDemoType) {
+        myapplicationId = "com.pingan.nt"
+        mykeyAlias = 'nt'
+        mykeyPassword = '123456'
+        mystoreFile = '../keystoreDir/keystore.jks'
+        mystorePassword = '123456'
+        wxPayAppId="wx782701887e39d58c"
+        res_name="jzb南通"
+    } else if (currentApkDemoType == dongguanApkDemoType) {
+        myapplicationId = "cn.gov.dg.iguanjia.app.prd"
+        mykeyAlias = 'gzrytong.keystore'
+        mykeyPassword = 'rytong00'
+        mystoreFile = '../keystoreDir/gzrytong.keystore'
+        mystorePassword = 'rytong00'
+        wxPayAppId="wxdbfe04b195afaff5"
+        res_name="jzb东莞"
+//        myapplicationId = "com.whmstr.whsmk"
+//        mykeyAlias = 'whsmk'
+//        mykeyPassword = '1qwe2wer'
+//        mystoreFile = '../keystoreDir/whsmk.jks'
+//        mystorePassword = '1qwe2wer'
+//        wxPayAppId="wx25901a3a52942845"
+//        res_name="jzb东莞-威海环境"
+    } else if (currentApkDemoType == gardenApkDemoType) {
+        myapplicationId = "com.pingan.smartcity.ipark.etown"
+        mykeyAlias = 'park_key'
+        mykeyPassword = 'android'
+        mystoreFile = '../keystoreDir/park.keystore'
+        mystorePassword = 'android'
+        wxPayAppId="wx45529365f098970c"
+        res_name="园区支付"
+    } else {
+        myapplicationId = "ceshi.com.zy.zh.zyzh"
+        mykeyAlias = 'zyzh'
+        mykeyPassword = 'zyzh123'
+        mystoreFile = '../keystoreDir/zyzh.jks'
+        mystorePassword 'zyzh123'
+        wxPayAppId="wx0cee08ba586c9378"
+        res_name="jzb紫云"
+
+    }
+
+    //上传
+    groupIdName = "com.pasc.business"
+    if (isRelease == 'true') {
+        if(currentBuildType==wxJzbPayBuildType){
+            // 无锡版本
+            versionMaven = '1.0.7'
+            artifactIdName = "wxEwallet"
+        }else if(currentBuildType==jhPayBuildType){
+            //聚合支付
+            versionMaven = '1.0.4'
+            artifactIdName = "jhEwallet"
+        }else if(currentBuildType==whJzbPayBuildType){
+            //威海支付
+            versionMaven = '1.0.0'
+            artifactIdName = "whEwallet"
+        } else if (currentBuildType == hsJzbPayBuildType) {
+            //黄山支付
+            versionMaven = '1.0.2'
+            artifactIdName = "hsEwallet"
+        } else if(currentBuildType==myJzbPayBuildType){
+            //绵阳支付
+            versionMaven = '1.0.0'
+            artifactIdName = "myEwallet"
+        } else{
+            versionMaven = '1.6.2'
+            artifactIdName = "ewallet"
+        }
+//        mavenUrl = "http://10.25.84.18:8089/nexus/content/repositories/ANDROID-RELEASE/"
+        mavenUrl = "http://maven.paic.com.cn/repository/maven-public"
+    } else {
+        if(currentBuildType==wxJzbPayBuildType){
+            // 无锡版本
+            versionMaven = '1.0.0-SNAPSHOT'
+            artifactIdName = "wxEwallet"
+        }else if(currentBuildType==jhPayBuildType){
+            //聚合支付
+            versionMaven = '1.0.2-SNAPSHOT'
+            artifactIdName = "jhEwallet"
+        }else if(currentBuildType==whJzbPayBuildType){
+            //威海支付
+            versionMaven = '1.0.0-SNAPSHOT'
+            artifactIdName = "whEwallet"
+        } else if (currentBuildType == hsJzbPayBuildType) {
+            //黄山支付
+            versionMaven = '1.0.2-SNAPSHOT'
+            artifactIdName = "hsEwallet"
+        } else if(currentBuildType==myJzbPayBuildType){
+            //绵阳支付
+            versionMaven = '1.0.4-SNAPSHOT'
+            artifactIdName = "myEwallet"
+        } else{
+            versionMaven = '1.2.2-SNAPSHOT'
+            artifactIdName = "ewallet"
+        }
+//        mavenUrl = "http://10.25.84.18:8089/nexus/content/repositories/ANDROID-SNAPSHOTS/"
+        mavenUrl = "http://maven.paic.com.cn/repository/maven-public"
+    }
+
+    //url
+    if(currentBuildType==wxJzbPayBuildType){
+        // 无锡版本见证宝
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/purse-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/stg2-gateway/"
+        RELEASE_ENV_HOST_URL="https://purse-gateway.myyancheng.com.cn/purse-gateway/"
+    }else if(currentBuildType==jhPayBuildType){
+        //聚合支付
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/zaozhuang-purse-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/zaozhuang-purse-gateway/"
+        RELEASE_ENV_HOST_URL="https://zzsc-smt.zaozhuang.cn/zaozhuang-purse-gateway/appfront/"
+    }else if(currentBuildType==whJzbPayBuildType){
+        //威海见证宝
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/purse-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/weihai-gateway/"
+        RELEASE_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/weihai-gateway/"
+    }else if(currentBuildType==hsJzbPayBuildType){
+        //黄山见证宝
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/purse-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/weihai-gateway/"
+        RELEASE_ENV_HOST_URL="https://www.hslyqy.com/purse-gateway/"
+    } else if(currentBuildType==myJzbPayBuildType){
+        //绵阳见证宝
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/purse-gateway/"
+        STG2_ENV_HOST_URL="http://sc-cc-test.yun.city.pingan.com/weihai-gateway/"
+        RELEASE_ENV_HOST_URL="https://mysamkj.com/purse-gateway/"
+    } else if(currentBuildType==ntJzbPayBuildType){
+        //南通见证宝
+//        TEST_ENV_HOST_URL="http://ntgsc-smt.nantong.gov.cn/purse-gateway/"
+//        STG2_ENV_HOST_URL="http://ntgsc-smt.nantong.gov.cn/purse-gateway/"
+//        RELEASE_ENV_HOST_URL="http://ntgsc-smt.nantong.gov.cn/purse-gateway/"
+        TEST_ENV_HOST_URL="http://sc-cc-test.yun.city.pingan.com/stg2-gateway/upp_front/"
+        STG2_ENV_HOST_URL="http://sc-cc-test.yun.city.pingan.com/stg2-gateway/upp_front/"
+        RELEASE_ENV_HOST_URL="http://sc-cc-test.yun.city.pingan.com/stg2-gateway/upp_front/"
+    } else if(currentBuildType==zsJzbPayBuildType){
+        //中山见证宝
+        TEST_ENV_HOST_URL="http://221.179.74.122:38080/purse-gateway/"
+        STG2_ENV_HOST_URL="http://221.179.74.122:38080/purse-gateway/"
+        RELEASE_ENV_HOST_URL="http://221.179.74.122:38080/purse-gateway/"
+    } else if(currentBuildType==dgJzbPayBuildType){
+        //东莞见证宝
+        TEST_ENV_HOST_URL="http://citycard-stg.pingan.com.cn/weihai-gateway/"
+        STG2_ENV_HOST_URL="http://citycard-stg.pingan.com.cn/weihai-gateway/"
+        RELEASE_ENV_HOST_URL="https://igj.dg.cn/purse-gateway/"
+    } else if(currentBuildType==yqJzbPayBuildType){
+        //园区支付
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/saas-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/saas-gateway/"
+        RELEASE_ENV_HOST_URL="https://isp.tml-itcity.com/saas-gateway/"
+    } else{
+        //见证宝
+        TEST_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/purse-gateway/"
+        STG2_ENV_HOST_URL="https://sc-cc-test.yun.city.pingan.com/stg2-gateway/"
+        RELEASE_ENV_HOST_URL="https://purse-gateway.myyancheng.com.cn/purse-gateway/"
+    }
+
+
+}

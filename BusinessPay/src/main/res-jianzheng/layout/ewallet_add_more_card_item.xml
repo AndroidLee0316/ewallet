@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ewallet_btn_default_white_selector"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_pay_main_dialog_item_pay_type_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/ewallet_pay_main_dialog_padding"
+        android:paddingRight="@dimen/ewallet_pay_main_dialog_padding">
+
+        <ImageView
+            android:layout_width="@dimen/ewallet_item_bank_card_icon_width"
+            android:layout_height="@dimen/ewallet_item_bank_card_icon_width"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ewallet_add_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ewallet_pay_main_dialog_padding"
+            android:text="使用新银行卡支付"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_vertical_split_height"
+        android:layout_below="@id/ewallet_container_rl"
+        android:layout_marginLeft="@dimen/ewallet_item_balance_list_padding_left"
+        android:visibility="gone"
+        android:background="@color/ewallet_primary_divider" />
+</LinearLayout>

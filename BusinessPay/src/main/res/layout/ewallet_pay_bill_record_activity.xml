@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ewallet_activity_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/ewallet_white_bg"
+        android:layout_height="@dimen/ewallet_pay_common_title_height">
+        <TextView
+            android:id="@+id/ewallet_tv_type"
+            android:layout_width="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:gravity="center"
+            android:textSize="@dimen/ewallet_pay_common_mid_size"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/ewallet_pay_down_arrow"
+            android:text="@string/ewallet_trade_bill_type"
+            android:textColor="@color/ewallet_color_333333"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/ewallet_tv_time"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:textSize="@dimen/ewallet_pay_common_mid_size"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/ewallet_pay_down_arrow"
+            android:paddingLeft="15dp"
+            android:text="@string/ewallet_trade_bill_time"
+            android:textColor="@color/ewallet_color_333333"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ewallet_pay_bill_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

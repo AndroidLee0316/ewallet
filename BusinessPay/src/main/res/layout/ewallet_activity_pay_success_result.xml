@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ewallet_primary_bg" >
+    <include layout="@layout/ewallet_activity_toolbar"/>
+    <LinearLayout
+        android:background="@color/ewallet_white_bg"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="41dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ewallet_ic_pay_result_success"/>
+        <TextView
+            android:id="@+id/ewallet_status_tv"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="21sp"
+            android:text="支付密码设置成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout >
+
+    <Button
+        android:id="@+id/ewallet_pay_result_next"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="17sp"
+        android:textColor="@color/ewallet_white_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="?android:attr/borderlessButtonStyle"
+        tools:text="完成(3s)"/>
+
+</LinearLayout >

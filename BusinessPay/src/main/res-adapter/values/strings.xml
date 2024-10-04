@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="ewallet_loading">正在加载中...</string>
+    <string name="ewallet_load_failed">加载失败，请点我重试</string>
+    <string name="ewallet_load_end">没有更多数据</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/ewallet_activity_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ewallet_white"
+        android:paddingBottom="30dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="由于以下原因您的钱包支付账户无法注销"
+        android:textColor="@color/ewallet_color_333333"
+        android:textSize="17sp"
+        android:layout_marginTop="24.5dp"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="6dp"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ewallet_logout_tip_icon"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/ewallet_withdraw_tip_ll"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/ewallet_circle_gray_bg" />
+        <TextView
+            android:id="@+id/ewallet_withdraw_tip_tv"
+            android:layout_width="wrap_content"
+            android:text="钱包账户有余额 ¥2.00、可提现金额 ¥1.00"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="15sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ewallet_withdraw_tip_tv2"
+        android:layout_width="wrap_content"
+        android:text="可用于消费或提现"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="15sp"
+        android:layout_marginLeft="39dp"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ewallet_onTrade_tip_ll"
+        android:layout_width="match_parent"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="21dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/ewallet_circle_gray_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="钱包账户有交易、在途、冻结资金"
+            android:textColor="@color/ewallet_color_333333"
+            android:textSize="15sp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ewallet_onTrade_tip_tv"
+        android:layout_width="wrap_content"
+        android:text="账户有提现、退款、交易等未结算及到账资金，建议等待资金到账后再操作"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/ewallet_color_999999"
+        android:textSize="15sp"
+        android:layout_marginLeft="39dp"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ewallet_logout_close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ewallet_account_btn_height"
+        android:layout_marginLeft="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginRight="@dimen/ewallet_pay_success_btn_margin_left"
+        android:layout_marginTop="@dimen/ewallet_pay_success_btn_margin_top"
+        android:background="@drawable/ewallet_btn_default_selector"
+        android:text="关闭"
+        android:textColor="@color/ewallet_white_bg"
+        android:textSize="@dimen/pasc_text_size_17"
+        android:gravity="center" />
+</LinearLayout>
